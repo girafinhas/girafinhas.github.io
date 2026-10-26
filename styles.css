@@ -784,3 +784,27 @@ h3{font-size:1.08rem}
   .inner .cta-band h2{font-size:1.25rem}
   .inner .day-steps{grid-template-columns:1fr 1fr;row-gap:22px}
 }
+
+/* atividades em cartões (sem foto) */
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.tile{display:flex;gap:12px;align-items:flex-start;padding:14px;border:1px solid var(--line);border-radius:16px;background:var(--bg);min-width:0}
+.tile-ico{flex:none;width:38px;height:38px;border-radius:12px;background:var(--sun-soft);color:#a8691f;display:grid;place-items:center;position:relative}
+.tile-ico::after{content:"";position:absolute;right:-3px;top:-3px;width:9px;height:8px;background:#c98a3a;border-radius:58% 42% 55% 45%/50% 60% 40% 50%;transform:rotate(-12deg)}
+.tile-ico svg{width:20px;height:20px}
+.tile b{display:block;font-size:.92rem;line-height:1.25}
+.tile div span{display:block;font-size:.8rem;color:var(--ink-2);margin-top:2px}
+.dates{margin-top:12px;display:flex;align-items:center;gap:12px 18px;flex-wrap:wrap;padding:14px 16px;border-radius:16px;background:var(--sun-soft)}
+.dates-k{display:flex;align-items:center;gap:8px;font-weight:700;font-size:.88rem}
+.dates-k .g{width:14px;height:24px}
+.dates ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.dates li{font-size:.8rem;font-weight:600;padding:5px 12px;border-radius:999px;background:var(--bg);border:1px solid rgba(201,138,58,.3)}
+@media (max-width:960px){.tiles{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){
+  .tiles{gap:8px}
+  .tile{flex-direction:column;gap:8px;padding:12px}
+  .tile-ico{width:32px;height:32px;border-radius:10px}
+  .tile-ico svg{width:17px;height:17px}
+  .tile b{font-size:.86rem}
+  .tile div span{font-size:.74rem}
+  .dates{flex-direction:column;align-items:flex-start}
+}
