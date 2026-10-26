@@ -39,16 +39,17 @@
       'Dia: '+fmt(selDay)+' às '+selHour+'\nResponsável: '+nome+' · '+fone+
       (v('bCrianca')?'\nCriança: '+v('bCrianca'):'')+' ('+v('bIdade')+')'+
       '\nConheci a escola por: '+v('bOrigem')+(v('bObs')?'\nObs.: '+v('bObs'):'');
+    var link=wa(resumo);
     var done=document.getElementById('bookDone');done.innerHTML='';
-    var big=document.createElement('div');big.className='big';big.textContent='Falta só enviar.';
-    var p=document.createElement('p');p.style.color='var(--ink-2)';p.textContent='Toque no botão abaixo para enviar o pedido para a nossa equipe pelo WhatsApp. A coordenação confirma o horário com você.';
+    var big=document.createElement('div');big.className='big';big.textContent='Agendamento pronto!';
+    var p=document.createElement('p');p.style.color='var(--ink-2)';p.textContent='Abrimos o WhatsApp da escola com o seu agendamento. Toque em enviar por lá, e a coordenação confirma o horário com você.';
     var sm=document.createElement('div');sm.className='summary';sm.textContent=resumo;
     var acts=document.createElement('div');acts.style.cssText='display:flex;gap:10px;flex-wrap:wrap';
-    var a=document.createElement('a');a.className='btn btn-wa';a.target='_blank';a.rel='noopener';a.href=wa(resumo);a.textContent='Enviar pelo WhatsApp';
-    var again=document.createElement('button');again.type='button';again.className='btn btn-ghost';again.textContent='Escolher outro horário';again.onclick=function(){done.hidden=true;document.getElementById('bookForm').hidden=false;selHour=null;renderSlots()};
+    var a=document.createElement('a');a.className='btn btn-wa';a.href=link;a.textContent='Abrir o WhatsApp de novo';
+    var again=document.createElement('button');again.type='button';again.className='btn btn-ghost';again.textContent='Escolher outro horário';again.onclick=function(){done.hidden=true;bookForm.hidden=false;selHour=null;renderSlots()};
     acts.append(a,again);done.append(big,p,sm,acts);
-    document.getElementById('bookForm').hidden=true;done.hidden=false;
-    window.open(a.href,'_blank','noopener');
+    bookForm.hidden=true;done.hidden=false;
+    window.location.href=link;
   });
 
   /* ---------- depoimentos ---------- */

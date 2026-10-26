@@ -557,3 +557,99 @@ nav.links a[aria-current="page"]:not(.btn)::after{content:"";position:absolute;l
   .day-steps p,.act span,.pillar p{font-size:.86rem}
   .cta-band h2{font-size:1.6rem}
 }
+
+/* rodapé compacto */
+footer{padding-block:28px 24px;border-top:1px solid var(--line)}
+.foot2{display:flex;align-items:center;gap:20px 36px;flex-wrap:wrap}
+.foot-logo{background:var(--logo-chip);border-radius:10px;padding:4px 6px;flex:none}
+.foot-logo img{height:40px;width:auto}
+.foot-info{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px 28px;font-size:.84rem;flex:1;min-width:0}
+.foot-info li{display:flex;align-items:baseline;gap:8px;min-width:0}
+.foot-info a{text-decoration:none;color:var(--ink)}
+.foot-info a:hover{text-decoration:underline}
+.fi-k{font-size:.64rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.mini-copy{background:none;border:0;padding:0;font:600 .72rem var(--f-body);color:var(--blue);cursor:pointer}
+.legal{margin-top:18px;padding-top:14px;font-size:.74rem}
+@media (max-width:560px){
+  footer{padding-block:24px 84px}
+  .foot2{flex-direction:column;align-items:flex-start;gap:16px}
+  .foot-info{flex-direction:column;gap:9px;width:100%}
+  .foot-info li{flex-wrap:nowrap;align-items:baseline}
+  .foot-info li > :nth-child(2){overflow-wrap:anywhere;min-width:0}
+  .fi-k{width:70px;flex:none}
+  .mini-copy{display:none}
+  .foot-info{font-size:.8rem}
+  .legal{flex-direction:column;gap:4px}
+}
+
+/* escala geral um pouco menor */
+body{font-size:15.5px}
+h1{font-size:clamp(2.3rem,5.4vw,4.2rem)}
+.hero h1{font-size:clamp(2.3rem,5.2vw,4.2rem)}
+h2{font-size:clamp(1.7rem,3.2vw,2.5rem)}
+h3{font-size:1.18rem}
+.lead{font-size:1.04rem}
+.band{padding-block:clamp(48px,7vw,92px)}
+.sec-head{margin-bottom:40px}
+.page-hero{padding-block:clamp(32px,5vw,60px) clamp(20px,3vw,36px)}
+.page-hero h1{font-size:clamp(2rem,4.2vw,3.2rem)}
+.fact{padding:22px 20px}
+.fact b{font-size:clamp(2rem,3.6vw,2.8rem)}
+.fact span{font-size:.84rem}
+.btn{font-size:.94rem;padding:12px 22px}
+.btn-lg{padding:14px 26px;font-size:.98rem}
+.top .wrap{height:68px}
+.brand img{height:44px}
+nav.links{font-size:.9rem;gap:24px}
+.subnav{top:calc(env(safe-area-inset-top,0px) + 68px)}
+@media (max-width:960px){nav.links{top:68px}}
+.next-card{padding:22px 26px}
+.next-card b{font-size:clamp(1.2rem,2.4vw,1.6rem)}
+.cta-band .wrap{padding-block:clamp(36px,5vw,56px)}
+.class{padding:20px 0}
+.class .age{font-size:1.8rem}
+.faq summary{font-size:1.05rem;padding:18px 40px 18px 0}
+.faq summary::after{top:14px}
+.dep{padding:22px}
+.dep blockquote{font-size:1.1rem}
+.dep.feature blockquote{font-size:clamp(1.25rem,2.2vw,1.7rem)}
+.ex-card{padding:22px}
+.ex-card h3{font-size:1.15rem}
+.ex-card p{font-size:.9rem}
+.book-card{padding:clamp(20px,2.6vw,30px);gap:20px}
+
+/* tipografia menor no celular */
+@media (max-width:600px){
+  body{font-size:15px;line-height:1.6}
+  h1,.hero h1{font-size:clamp(1.85rem,8.6vw,2.25rem)}
+  .page-hero h1{font-size:clamp(1.75rem,8vw,2.1rem)}
+  h2{font-size:clamp(1.5rem,6.6vw,1.8rem)}
+  h3{font-size:1.1rem}
+  .lead,.hero .lead{font-size:.97rem}
+  .eyebrow{font-size:.66rem;letter-spacing:.15em}
+  .live-pill{font-size:.75rem}
+  .btn{font-size:.92rem;padding:12px 20px}
+  .btn-lg{padding:14px 22px;font-size:.95rem}
+  .band{padding-block:48px}
+  .sec-head{margin-bottom:32px;gap:12px}
+  .page-hero{padding-block:32px 24px}
+  .page-hero .wrap{gap:12px}
+  .grow-title{font-size:1.15rem}
+  .rungs b{font-size:.98rem}
+  .rungs span{font-size:.76rem}
+  .fact b{font-size:1.7rem}
+  .fact span{font-size:.78rem}
+  .next-visit b{font-size:.95rem}
+  .class .age{font-size:1.7rem}
+  .class h3{font-size:1.05rem}
+  .dep blockquote{font-size:1.05rem}
+  .dep.feature blockquote{font-size:1.2rem}
+  .faq summary{font-size:1rem;padding:18px 36px 18px 0}
+  .faq summary::after{top:14px}
+  .next-card b{font-size:1.25rem}
+  .ex-card h3{font-size:1rem}
+  .post h3{font-size:1.1rem}
+  .day-steps h3{font-size:1rem}
+  .day-steps p,.act span,.pillar p{font-size:.86rem}
+  .cta-band h2{font-size:1.6rem}
+}
