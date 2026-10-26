@@ -521,3 +521,39 @@ section[id]{scroll-margin-top:150px}
 nav.links a:not(.btn){position:relative}
 nav.links a[aria-current="page"]:not(.btn)::after{content:"";position:absolute;left:50%;bottom:-10px;width:9px;height:8px;margin-left:-4px;background:#c98a3a;border-radius:58% 42% 55% 45%/50% 60% 40% 50%;transform:rotate(-12deg)}
 @media (max-width:960px){nav.links a[aria-current="page"]:not(.btn)::after{left:auto;right:4px;bottom:50%;margin-bottom:-4px}}
+
+/* tipografia menor no celular */
+@media (max-width:600px){
+  body{font-size:15px;line-height:1.6}
+  h1,.hero h1{font-size:clamp(1.85rem,8.6vw,2.25rem)}
+  .page-hero h1{font-size:clamp(1.75rem,8vw,2.1rem)}
+  h2{font-size:clamp(1.5rem,6.6vw,1.8rem)}
+  h3{font-size:1.1rem}
+  .lead,.hero .lead{font-size:.97rem}
+  .eyebrow{font-size:.66rem;letter-spacing:.15em}
+  .live-pill{font-size:.75rem}
+  .btn{font-size:.92rem;padding:12px 20px}
+  .btn-lg{padding:14px 22px;font-size:.95rem}
+  .band{padding-block:48px}
+  .sec-head{margin-bottom:32px;gap:12px}
+  .page-hero{padding-block:32px 24px}
+  .page-hero .wrap{gap:12px}
+  .grow-title{font-size:1.15rem}
+  .rungs b{font-size:.98rem}
+  .rungs span{font-size:.76rem}
+  .fact b{font-size:1.7rem}
+  .fact span{font-size:.78rem}
+  .next-visit b{font-size:.95rem}
+  .class .age{font-size:1.7rem}
+  .class h3{font-size:1.05rem}
+  .dep blockquote{font-size:1.05rem}
+  .dep.feature blockquote{font-size:1.2rem}
+  .faq summary{font-size:1rem;padding:18px 36px 18px 0}
+  .faq summary::after{top:14px}
+  .next-card b{font-size:1.25rem}
+  .ex-card h3{font-size:1rem}
+  .post h3{font-size:1.1rem}
+  .day-steps h3{font-size:1rem}
+  .day-steps p,.act span,.pillar p{font-size:.86rem}
+  .cta-band h2{font-size:1.6rem}
+}
