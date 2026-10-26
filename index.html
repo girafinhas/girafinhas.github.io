@@ -115,22 +115,65 @@ nav.links .btn{padding:11px 20px;color:var(--accent-ink)}
 }
 
 /* hero */
-.hero{padding-block:clamp(40px,6vw,88px) 0}
-.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(36px,6vw,88px);align-items:center}
-.hero-copy{display:grid;gap:26px;min-width:0}
-.hero-copy .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
-.hero-art{position:relative;min-width:0}
-.arch{border-radius:32px;overflow:hidden;aspect-ratio:4/5;background:var(--sun-soft);max-width:100%}
-.arch img{width:100%;height:100%;object-fit:cover;object-position:42% 50%}
-.arch.logo-hero{background:#fffaf0;aspect-ratio:1/1;display:grid;place-items:center;padding:8%;border:1px solid var(--line)}
-.arch.logo-hero img{height:auto;object-fit:contain}
-.bubble{position:absolute;left:0;bottom:0;width:38%;aspect-ratio:1;border-radius:50%;overflow:hidden;border:6px solid var(--bg);box-shadow:0 18px 40px -20px rgba(0,0,0,.35)}
-.bubble img{width:100%;height:100%;object-fit:cover}
-.rating{position:absolute;left:18px;bottom:18px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 16px;display:grid;gap:2px;box-shadow:0 18px 40px -24px rgba(0,0,0,.3)}
-.rating b{font-family:var(--f-display);font-weight:800;font-size:1.9rem;line-height:1}
-.rating .stars{color:var(--accent);font-size:.8rem;letter-spacing:2px}
-.rating small{font-size:.78rem;color:var(--ink-2)}
-@media (max-width:880px){.hero-grid{grid-template-columns:1fr}.hero-art{max-width:560px;width:100%}.arch.logo-hero{aspect-ratio:4/3;padding:8%}}
+.hero{padding-block:clamp(36px,5vw,72px) 0;position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(36px,6vw,80px);align-items:center}
+.hero-copy{display:grid;gap:24px;min-width:0;justify-items:start}
+.hero-copy .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:4px}
+.btn-lg{padding:16px 28px;font-size:1.02rem}
+.live-pill{display:inline-flex;align-items:center;gap:10px;padding:8px 16px 8px 12px;border-radius:999px;background:var(--sun-soft);color:var(--ink);font-weight:700;font-size:.86rem;text-decoration:none;border:1px solid color-mix(in srgb,var(--accent) 45%,transparent)}
+.live-pill .dot{width:9px;height:9px;border-radius:50%;background:#e2483d;box-shadow:0 0 0 0 rgba(226,72,61,.5);animation:pulse 1.8s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px rgba(226,72,61,0)}100%{box-shadow:0 0 0 0 rgba(226,72,61,0)}}
+.hero h1{font-size:clamp(2.6rem,6vw,4.9rem)}
+.rot{display:inline-block;height:1.08em;overflow:hidden;vertical-align:bottom}
+.rot-track{display:flex;flex-direction:column;align-items:flex-start;animation:rot 10s cubic-bezier(.7,0,.3,1) infinite}
+.rot-track em{display:block;width:max-content;height:1.08em;line-height:1.08;white-space:nowrap}
+@keyframes rot{0%,18%{transform:translateY(0)}25%,43%{transform:translateY(-1.08em)}50%,68%{transform:translateY(-2.16em)}75%,93%{transform:translateY(-3.24em)}100%{transform:translateY(-4.32em)}}
+.proof{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:6px;padding-top:22px;border-top:1px solid var(--line);font-size:.92rem;color:var(--ink-2)}
+.proof-item{display:flex;align-items:center;gap:10px}
+.proof b{color:var(--ink)}
+.proof .stars{color:var(--accent);letter-spacing:2px}
+.proof .ig{width:20px;height:20px;border-radius:6px;background:linear-gradient(45deg,#f9a825,#e1306c 55%,#833ab4)}
+
+.hero-art{position:relative;min-width:0;padding:10px 0 34px}
+.blob{position:absolute;inset:-6% -18% 4% 8%;border-radius:44% 56% 52% 48%/48% 42% 58% 52%;background:radial-gradient(circle at 30% 30%,var(--sun-soft),color-mix(in srgb,var(--accent) 30%,var(--bg)));z-index:0;animation:morph 14s ease-in-out infinite alternate}
+@keyframes morph{to{border-radius:56% 44% 42% 58%/40% 58% 42% 60%}}
+.grow-card{position:relative;z-index:1;background:var(--card);border:1px solid var(--line);border-radius:28px;padding:22px 22px 58px;box-shadow:0 30px 60px -34px rgba(22,33,58,.45);display:grid;gap:14px;max-width:440px;margin-left:auto}
+.grow-head{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.grow-kicker{font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue)}
+.grow-title{font-size:1.25rem;margin-top:4px}
+.grow-logo{height:42px;width:auto;background:#fff;border-radius:10px;padding:3px 5px;flex:none}
+.grow-body{display:grid;grid-template-columns:64px 1fr;gap:14px;align-items:end}
+.neck{position:relative;height:100%;display:flex;flex-direction:column;align-items:center}
+.peek{width:64px;height:auto;margin-bottom:-6px;position:relative;z-index:1;animation:peek 4s ease-in-out infinite;transform-origin:50% 100%}
+@keyframes peek{0%,100%{transform:rotate(0)}50%{transform:rotate(-4deg)}}
+.neck-bar{flex:1;width:30px;border-radius:14px;transform-origin:bottom;animation:grow 1.4s cubic-bezier(.2,.8,.2,1) both;
+  background:
+   radial-gradient(ellipse 7px 6px at 30% 6%,#8b5a2b 90%,transparent 100%),
+   radial-gradient(ellipse 6px 8px at 72% 16%,#8b5a2b 90%,transparent 100%),
+   radial-gradient(ellipse 8px 6px at 35% 28%,#8b5a2b 90%,transparent 100%),
+   radial-gradient(ellipse 6px 7px at 70% 40%,#8b5a2b 90%,transparent 100%),
+   radial-gradient(ellipse 7px 7px at 28% 52%,#8b5a2b 90%,transparent 100%),
+   radial-gradient(ellipse 6px 8px at 70% 64%,#8b5a2b 90%,transparent 100%),
+   radial-gradient(ellipse 8px 6px at 34% 76%,#8b5a2b 90%,transparent 100%),
+   radial-gradient(ellipse 6px 7px at 68% 88%,#8b5a2b 90%,transparent 100%),
+   #edb65e}
+@keyframes grow{from{transform:scaleY(.15)}to{transform:scaleY(1)}}
+.rungs{list-style:none;margin:0;padding:0;display:grid}
+.rungs li{animation:rise .6s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(.25s + (5 - var(--i)) * .09s)}
+@keyframes rise{from{opacity:.0;transform:translateX(10px)}to{opacity:1;transform:none}}
+.rungs a{display:grid;grid-template-columns:auto 1fr;gap:2px 10px;align-items:baseline;padding:10px 10px 10px 0;border-bottom:1px dashed var(--line);text-decoration:none;position:relative;border-radius:8px;transition:background .2s,padding .2s}
+.rungs li:last-child a{border-bottom:0}
+.rungs a::before{content:"";position:absolute;left:-22px;top:50%;width:14px;height:2px;background:var(--line)}
+.rungs a:hover{background:var(--sun-soft);padding-left:10px}
+.rungs b{font-family:var(--f-display);font-weight:700;font-size:1.05rem;letter-spacing:-.01em}
+.rungs span{font-size:.82rem;color:var(--ink-2)}
+.next-visit{position:absolute;left:0;bottom:0;z-index:2;display:flex;align-items:center;gap:12px;background:var(--navy);color:var(--navy-fg);text-decoration:none;border-radius:18px;padding:12px 18px 12px 14px;box-shadow:0 20px 40px -18px rgba(22,33,58,.6);transition:transform .2s}
+.next-visit:hover{transform:translateY(-2px)}
+.next-visit .nv-ico{width:38px;height:38px;border-radius:12px;background:var(--accent);display:grid;place-items:center;font-size:1.1rem}
+.next-visit small{display:block;font-size:.72rem;opacity:.75;letter-spacing:.04em}
+.next-visit b{font-family:var(--f-display);font-size:1.05rem}
+@media (max-width:880px){.hero-grid{grid-template-columns:1fr}.grow-card{margin:0 auto 0 0;max-width:520px}.blob{inset:0 -30% 10% 20%}.next-visit{left:auto;right:0}}
+@media (prefers-reduced-motion:reduce){.rot-track{animation:none}}
 
 .facts{margin-top:clamp(48px,7vw,88px);display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .fact{padding:30px 24px;display:grid;gap:8px;border-left:1px solid var(--line);align-content:start}
@@ -383,16 +426,41 @@ footer{padding-block:56px 40px}
     <div class="wrap">
       <div class="hero-grid">
         <div class="hero-copy">
-          <span class="eyebrow">Educação infantil cristã em Contagem</span>
-          <h1>Educação infantil com <em>amor</em> e propósito.</h1>
-          <p class="lead">Do berçário ao Infantil 5, em período integral. Um ambiente seguro e acolhedor, com ensino cristão e uma equipe preparada que cuida de cada criança pelo nome.</p>
+          <a class="live-pill" href="#visita"><span class="dot" aria-hidden="true"></span>Matrículas 2027 abertas · vagas limitadas</a>
+          <h1>Aqui seu filho cresce com <span class="rot" aria-label="amor"><span class="rot-track" aria-hidden="true"><em>amor.</em><em>fé.</em><em>cuidado.</em><em>alegria.</em><em>amor.</em></span></span></h1>
+          <p class="lead">Educação infantil cristã do berçário ao Infantil 5, em período integral, no novo espaço do Jardim Riacho das Pedras, em Contagem.</p>
           <div class="actions">
-            <a class="btn btn-primary" href="#visita">Agende uma visita</a>
-            <a class="btn btn-ghost" href="#turmas">Conheça as turmas</a>
+            <a class="btn btn-primary btn-lg" href="#visita">Agende uma visita <span aria-hidden="true">→</span></a>
+            <a class="btn btn-ghost btn-lg" href="#turmas">Conheça as turmas</a>
+          </div>
+          <div class="proof">
+            <div class="proof-item"><span class="stars" aria-hidden="true">★★★★★</span><span><b>4,9 no Google</b> · 82 avaliações</span></div>
+            <div class="proof-item"><span class="ig" aria-hidden="true"></span><span><b>2.735</b> famílias e amigos no Instagram</span></div>
           </div>
         </div>
         <div class="hero-art">
-          <div class="arch logo-hero"><img src="img/logo.svg" alt="Logo do Colégio Cristão Girafinhas: duas girafas, uma grande e uma pequena" width="1860" height="990"></div>
+          <div class="blob" aria-hidden="true"></div>
+          <div class="grow-card">
+            <div class="grow-head">
+              <div><span class="grow-kicker">Régua do crescimento</span><h2 class="grow-title">Uma turma para cada fase</h2></div>
+              <img class="grow-logo" src="img/logo.svg" alt="Colégio Cristão Girafinhas" width="94" height="50">
+            </div>
+            <div class="grow-body">
+              <div class="neck" aria-hidden="true">
+                <img class="peek" src="img/girafas.svg" alt="" width="64" height="100">
+                <div class="neck-bar"></div>
+              </div>
+              <ol class="rungs" reversed>
+                <li style="--i:5"><a href="#turmas"><b>Infantil 5</b><span>5 anos</span></a></li>
+                <li style="--i:4"><a href="#turmas"><b>Infantil 4</b><span>4 anos</span></a></li>
+                <li style="--i:3"><a href="#turmas"><b>Infantil 3</b><span>3 anos</span></a></li>
+                <li style="--i:2"><a href="#turmas"><b>Infantil 2</b><span>2 anos</span></a></li>
+                <li style="--i:1"><a href="#turmas"><b>Infantil 1</b><span>1 ano</span></a></li>
+                <li style="--i:0"><a href="#turmas"><b>Berçário</b><span>até 1 ano</span></a></li>
+              </ol>
+            </div>
+          </div>
+          <a class="next-visit" href="#visita"><span class="nv-ico" aria-hidden="true">📅</span><span><small>Próxima visita disponível</small><b id="nextVisit">Esta semana</b></span></a>
         </div>
       </div>
       <div class="facts">

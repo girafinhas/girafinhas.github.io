@@ -26,6 +26,8 @@
   function renderSlots(){slotsEl.innerHTML='';HOURS.forEach(function(h){var b=document.createElement('button');b.type='button';b.className='slot';b.textContent=h;b.setAttribute('aria-pressed',selHour===h);b.onclick=function(){selHour=h;renderSlots()};slotsEl.appendChild(b)});
     btn.disabled=!selHour;msg.className='msg';msg.textContent=selHour?fmt(selDay)+' às '+selHour:'Escolha um dia e um horário.'}
   renderDays();renderSlots();
+  (function(){var nv=document.getElementById('nextVisit');if(!nv)return;var d=days[0],t=new Date();t.setHours(0,0,0,0);t.setDate(t.getDate()+1);
+    nv.textContent=(d.getTime()===t.getTime()?'Amanhã, ':'')+WD[d.getDay()]+' '+d.getDate()+' de '+MES[d.getMonth()]+' · '+HOURS[0]})();
 
   document.getElementById('bookForm').addEventListener('submit',function(e){
     e.preventDefault();if(!selHour)return;
