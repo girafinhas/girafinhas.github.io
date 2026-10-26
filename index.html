@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Colégio Cristão Girafinhas | Educação Infantil em Contagem</title>
+<meta name="description" content="Educação infantil cristã em Contagem, MG. Berçário ao Infantil 5 em período integral, no novo espaço do Jardim Riacho das Pedras. Matrículas 2027 abertas: agende sua visita.">
+<meta property="og:title" content="Colégio Cristão Girafinhas">
+<meta property="og:description" content="Educação infantil com amor e propósito. Berçário ao Infantil 5, integral, em Contagem. Matrículas 2027 abertas.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="img/logo.svg">
+<link rel="icon" href="img/logo.svg" type="image/svg+xml">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Preschool","name":"Colégio Cristão Girafinhas","telephone":"+55 31 4112-3690","email":"girafinhas.coordenacao@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Av. Riacho das Pedras, 568","addressLocality":"Contagem","addressRegion":"MG","postalCode":"32241-320","addressCountry":"BR"},"sameAs":["https://www.instagram.com/colegiocristao.girafinhas/"]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<style>
+html{padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}
+body{margin:0}
+[hidden]{display:none!important}
+img{max-width:100%}
+/* Layout: modern school site — confident bold sans heads, navy ink for seriousness, the logo yellow as the single bright note, few photos shown large, hairline dividers between sections */
+:root{
+  --bg:#ffffff;
+  --bg-soft:#f4f6fa;
+  --sun-soft:#fff3cf;
+  --ink:#16213a;
+  --ink-2:#5b6478;
+  --line:#e3e7ef;
+  --accent:#f5b416;
+  --accent-ink:#1d1600;
+  --blue:#2f63b8;
+  --blue-soft:#e9effa;
+  --navy:#16213a;
+  --navy-fg:#f4f6fb;
+  --card:#ffffff;
+  --logo-chip:transparent;
+  --ok:#2f7d4f;
+  --err:#c2412d;
+  --wa:#1f8f4e;
+  --f-display:"Bricolage Grotesque","Plus Jakarta Sans",system-ui,sans-serif;
+  --f-body:"Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --max:1180px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f1524;--bg-soft:#151d30;--sun-soft:#2b2512;--ink:#eef1f7;--ink-2:#a8b0c2;--line:#26304a;--navy:#1b2a4a;--navy-fg:#f4f6fb;
+  --accent:#f5bb3b;--accent-ink:#2a1e00;--blue:#8fbdf0;--blue-soft:#1a2431;--card:#1b1b1e;--logo-chip:#ffffff;--ok:#6cc08d;--err:#ef8a78;--wa:#2fae64;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1524;--bg-soft:#151d30;--sun-soft:#2b2512;--ink:#eef1f7;--ink-2:#a8b0c2;--line:#26304a;--navy:#1b2a4a;--navy-fg:#f4f6fb;
+  --accent:#f5bb3b;--accent-ink:#2a1e00;--blue:#8fbdf0;--blue-soft:#1a2431;--card:#1b1b1e;--logo-chip:#ffffff;--ok:#6cc08d;--err:#ef8a78;--wa:#2fae64;color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+a{color:inherit}
+img{display:block}
+h1,h2,h3{font-family:var(--f-display);font-weight:700;line-height:1.02;text-wrap:balance;margin:0;letter-spacing:-.03em}
+h1{font-size:clamp(2.7rem,6.4vw,5.2rem);font-weight:800}
+h2{font-size:clamp(2rem,3.8vw,3rem)}
+h3{font-size:1.3rem;line-height:1.2;letter-spacing:-.015em}
+h1 em,h2 em{font-style:normal;color:var(--ink);background:linear-gradient(transparent 66%,var(--accent) 66%,var(--accent) 90%,transparent 90%);padding:0 .04em}
+p{margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.band{padding-block:clamp(64px,9vw,120px)}
+.band + .band{border-top:1px solid var(--line)}
+.band.soft{background:var(--bg-soft);border-top:0}
+.band.soft + .band{border-top:0}
+.band.navy{background:var(--navy);color:var(--navy-fg);border-top:0}
+.band.navy + .band{border-top:0}
+.navy small,.navy figcaption{color:color-mix(in srgb,var(--navy-fg) 70%,transparent)!important}
+.navy figcaption b{color:var(--navy-fg)!important}
+.eyebrow{font-size:.74rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--blue)}
+.lead{font-size:1.12rem;color:var(--ink-2);max-width:58ch}
+.sec-head{display:grid;gap:16px;margin-bottom:56px;max-width:720px}
+.sec-head.split{max-width:none;grid-template-columns:1fr 1fr;align-items:end;gap:24px 64px}
+@media (max-width:820px){.sec-head.split{grid-template-columns:1fr}}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:6px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 .98rem var(--f-body);padding:14px 26px;border-radius:999px;border:1.5px solid transparent;cursor:pointer;text-decoration:none;transition:background .2s,border-color .2s,transform .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--accent);color:var(--accent-ink)}
+.btn-primary:hover{background:color-mix(in srgb,var(--accent) 88%,#000)}
+.btn-ghost{border-color:var(--line);background:transparent;color:var(--ink)}
+.btn-ghost:hover{border-color:var(--ink)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-wa svg{width:20px;height:20px}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.link{font-weight:600;color:var(--blue);text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:1px}
+
+/* announcement + header */
+.announce{background:var(--navy);color:var(--navy-fg);font-size:.84rem}
+.announce .wrap{padding-block:9px;display:flex;justify-content:space-between;align-items:center;gap:8px 24px;flex-wrap:wrap}
+.announce a{font-weight:700;text-decoration:none;color:inherit}
+.announce > .wrap > span:first-child a{color:var(--accent);border-bottom:1px solid currentColor}
+.announce .util{display:flex;gap:22px;flex-wrap:wrap;opacity:.85}
+.announce .util a{font-weight:500}
+@media (max-width:820px){.announce .util{display:none}.announce .wrap{justify-content:center}}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:78px}
+.brand{display:flex;align-items:center;text-decoration:none;background:var(--logo-chip);border-radius:12px;padding:4px 8px;margin-left:-8px}
+.brand img{height:50px;width:auto}
+nav.links{display:flex;gap:30px;align-items:center;font-weight:500;font-size:.94rem}
+nav.links a{text-decoration:none;color:var(--ink-2)}
+nav.links a:not(.btn):hover{color:var(--ink)}
+nav.links .btn{padding:11px 20px;color:var(--accent-ink)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:999px;padding:8px 16px;font:600 .9rem var(--f-body);color:var(--ink);cursor:pointer}
+@media (max-width:960px){
+  .menu-btn{display:block}
+  nav.links{display:none;position:absolute;top:78px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px max(20px,env(safe-area-inset-right,0px)) 20px max(20px,env(safe-area-inset-left,0px))}
+  nav.links.open{display:flex}
+  nav.links a:not(.btn){padding:14px 0;border-bottom:1px solid var(--line);color:var(--ink)}
+  nav.links .btn{margin-top:14px}
+}
+
+/* hero */
+.hero{padding-block:clamp(40px,6vw,88px) 0}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(36px,6vw,88px);align-items:center}
+.hero-copy{display:grid;gap:26px;min-width:0}
+.hero-copy .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+.hero-art{position:relative;min-width:0}
+.arch{border-radius:32px;overflow:hidden;aspect-ratio:4/5;background:var(--sun-soft);max-width:100%}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:42% 50%}
+.arch.logo-hero{background:#fffaf0;aspect-ratio:1/1;display:grid;place-items:center;padding:8%;border:1px solid var(--line)}
+.arch.logo-hero img{height:auto;object-fit:contain}
+.bubble{position:absolute;left:0;bottom:0;width:38%;aspect-ratio:1;border-radius:50%;overflow:hidden;border:6px solid var(--bg);box-shadow:0 18px 40px -20px rgba(0,0,0,.35)}
+.bubble img{width:100%;height:100%;object-fit:cover}
+.rating{position:absolute;left:18px;bottom:18px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 16px;display:grid;gap:2px;box-shadow:0 18px 40px -24px rgba(0,0,0,.3)}
+.rating b{font-family:var(--f-display);font-weight:800;font-size:1.9rem;line-height:1}
+.rating .stars{color:var(--accent);font-size:.8rem;letter-spacing:2px}
+.rating small{font-size:.78rem;color:var(--ink-2)}
+@media (max-width:880px){.hero-grid{grid-template-columns:1fr}.hero-art{max-width:560px;width:100%}.arch.logo-hero{aspect-ratio:4/3;padding:8%}}
+
+.facts{margin-top:clamp(48px,7vw,88px);display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.fact{padding:30px 24px;display:grid;gap:8px;border-left:1px solid var(--line);align-content:start}
+.fact:first-child{border-left:0;padding-left:0}
+.fact b{font-family:var(--f-display);font-weight:800;font-size:clamp(2.4rem,4.4vw,3.4rem);line-height:1;letter-spacing:-.04em}
+.fact b i{font-style:normal;color:var(--accent);font-size:.5em;vertical-align:.7em;margin-left:4px}
+.fact span{font-size:.9rem;color:var(--ink-2);max-width:22ch}
+@media (max-width:820px){.facts{grid-template-columns:1fr 1fr}.fact:nth-child(3){border-left:0;padding-left:0}.fact:nth-child(n+3){border-top:1px solid var(--line)}}
+
+/* pillars */
+.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.pillar{padding:4px 28px 0;border-left:1px solid var(--line);display:grid;gap:12px;align-content:start}
+.pillar:first-child{border-left:0;padding-left:0}
+.pillar svg{width:30px;height:30px;color:var(--accent)}
+.pillar p{color:var(--ink-2);font-size:.96rem}
+@media (max-width:900px){.pillars{grid-template-columns:1fr 1fr;row-gap:40px}.pillar:nth-child(3){border-left:0;padding-left:0}}
+@media (max-width:520px){.pillars{grid-template-columns:1fr}.pillar{border-left:0;padding-left:0;padding-right:0}}
+
+/* story */
+.story{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(40px,6vw,96px);align-items:start}
+.panel{position:sticky;top:110px;background:var(--navy);color:var(--navy-fg);border-radius:32px;padding:clamp(28px,4vw,48px);display:grid;gap:18px;align-content:start}
+.panel-quote{font-family:var(--f-display);font-weight:600;font-size:clamp(1.5rem,2.4vw,2rem);line-height:1.2;letter-spacing:-.02em}
+.panel-cite{font-size:.88rem;opacity:.7}
+.panel-logo{margin-top:18px;background:#fff;border-radius:18px;padding:12px 16px;justify-self:start}
+.panel-logo img{height:64px;width:auto}
+.panel-note{font-size:.94rem;opacity:.85}
+.panel-note b{opacity:1}
+.collage figure{margin:0;border-radius:22px;overflow:hidden;background:var(--bg-soft)}
+.collage img{width:100%;height:100%;object-fit:cover}
+.collage .c1{grid-column:1/-1;aspect-ratio:16/10}
+.collage .c2,.collage .c3{aspect-ratio:1}
+.collage figcaption{font-size:.8rem;color:var(--ink-2);padding:8px 2px 0;background:var(--bg)}
+@media (max-width:880px){.story{grid-template-columns:1fr}.panel{position:static}}
+.timeline{list-style:none;margin:40px 0 0;padding:0;display:grid}
+.timeline li{display:grid;grid-template-columns:120px 1fr;gap:24px;padding:26px 0;border-top:1px solid var(--line)}
+.timeline li:last-child{border-bottom:1px solid var(--line)}
+.timeline .when{font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);padding-top:6px}
+.timeline p{color:var(--ink-2);margin-top:8px}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr;gap:6px}}
+.unused-verse{margin-top:40px;padding-left:22px;border-left:2px solid var(--accent)}
+.verse blockquote{margin:0;font-family:var(--f-display);font-style:italic;font-size:1.35rem;line-height:1.45}
+.verse cite{display:block;margin-top:8px;font:500 .85rem var(--f-body);font-style:normal;color:var(--ink-2)}
+.rename{margin-top:32px;display:flex;gap:18px;align-items:center;padding:18px 20px;border-radius:18px;background:var(--bg-soft)}
+.rename .chip{background:#fff;border-radius:12px;padding:8px 10px;flex:none}
+.rename .chip img{height:44px;width:auto}
+.rename p{font-size:.94rem;color:var(--ink-2)}
+.rename b{color:var(--ink)}
+
+/* turmas */
+.classes{border-top:2px solid var(--ink)}
+.class{display:grid;grid-template-columns:180px 220px 1fr;gap:24px;padding:28px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.class .age{font-family:var(--f-display);font-weight:800;font-size:2.2rem;line-height:1;letter-spacing:-.03em}
+.class .age small{font-family:var(--f-body);font-size:.85rem;color:var(--ink-2);margin-left:6px}
+.class h3{font-size:1.25rem}
+.class p{color:var(--ink-2)}
+@media (max-width:820px){.class{grid-template-columns:1fr;gap:6px}}
+.periods{margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.period{border-radius:22px;padding:28px;display:grid;gap:8px;background:var(--card);border:1px solid var(--line)}
+.period.main{background:var(--sun-soft);border-color:transparent}
+.period .t{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2)}
+.period p{color:var(--ink-2)}
+@media (max-width:640px){.periods{grid-template-columns:1fr}}
+
+/* day */
+.day-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,1fr);gap:0;counter-reset:s}
+.day-steps li{padding:22px 18px 0 0;border-top:2px solid var(--line);position:relative;display:grid;gap:8px;align-content:start}
+.day-steps li::before{counter-increment:s;content:counter(s,decimal-leading-zero);font-size:.75rem;font-weight:700;color:var(--blue);letter-spacing:.1em}
+.day-steps li::after{content:"";position:absolute;top:-6px;left:0;width:10px;height:10px;border-radius:50%;background:var(--accent)}
+.day-steps h3{font-size:1.15rem}
+.day-steps p{font-size:.9rem;color:var(--ink-2)}
+@media (max-width:960px){.day-steps{grid-template-columns:repeat(3,1fr);row-gap:36px}}
+@media (max-width:520px){.day-steps{grid-template-columns:1fr 1fr}}
+
+/* activities */
+.acts-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(36px,6vw,80px);align-items:center}
+.acts-photo{border-radius:28px;overflow:hidden;aspect-ratio:4/5;background:var(--sun-soft);max-width:100%}
+.acts-photo img{width:100%;height:100%;object-fit:cover}
+.acts{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+.act{padding:20px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:28px 1fr;gap:4px 14px}
+.act svg{width:22px;height:22px;color:var(--blue);margin-top:3px;grid-row:span 2}
+.act b{font-weight:700}
+.act span{font-size:.92rem;color:var(--ink-2)}
+@media (max-width:880px){.acts-grid{grid-template-columns:1fr}.acts-photo{max-width:440px;aspect-ratio:4/3}}
+@media (max-width:520px){.acts{grid-template-columns:1fr}}
+
+/* reviews */
+.testi{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px)}
+.testi figure{margin:0;display:grid;gap:18px;align-content:start}
+.testi blockquote{margin:0;font-family:var(--f-display);font-weight:600;font-size:clamp(1.4rem,2.4vw,1.9rem);line-height:1.25;letter-spacing:-.02em}
+.testi figcaption{font-size:.9rem;color:var(--ink-2)}
+.testi figcaption b{color:var(--ink);font-weight:600}
+.score-row{display:flex;align-items:center;gap:16px;margin-bottom:48px;flex-wrap:wrap}
+.score-row b{font-family:var(--f-display);font-weight:800;font-size:3.4rem;line-height:1}
+.score-row .stars{color:var(--accent);letter-spacing:3px}
+.score-row small{color:var(--ink-2);display:block}
+@media (max-width:760px){.testi{grid-template-columns:1fr}}
+
+/* depoimentos */
+.dep-head{display:flex;justify-content:space-between;align-items:end;gap:24px 48px;flex-wrap:wrap;margin-bottom:48px}
+.deps{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.dep.feature{grid-column:1/-1;padding:clamp(28px,4vw,48px)}
+.dep.feature blockquote{font-size:clamp(1.4rem,2.6vw,2.1rem);line-height:1.25;max-width:46ch}
+.dep{margin:0;padding:28px;border-radius:24px;background:color-mix(in srgb,var(--navy-fg) 7%,transparent);border:1px solid color-mix(in srgb,var(--navy-fg) 12%,transparent);display:grid;gap:16px;align-content:start;min-width:0}
+.dep .stars{color:var(--accent);letter-spacing:2px;font-size:.9rem}
+.dep blockquote{margin:0;font-family:var(--f-display);font-weight:600;font-size:1.22rem;line-height:1.3;letter-spacing:-.015em;overflow-wrap:anywhere}
+.dep figcaption{display:grid;gap:2px;font-size:.88rem}
+.dep figcaption span{opacity:.65}
+.dep .admin-x{justify-self:start;background:none;border:0;color:var(--accent);font:600 .8rem var(--f-body);cursor:pointer;padding:0}
+@media (max-width:600px){.deps{grid-template-columns:1fr}}
+.dep-form-wrap{margin-top:56px;padding-top:48px;border-top:1px solid color-mix(in srgb,var(--navy-fg) 15%,transparent);display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,5vw,64px)}
+.dep-form{display:grid;gap:14px}
+.navy input,.navy select,.navy textarea{background:color-mix(in srgb,var(--navy-fg) 6%,transparent);border-color:color-mix(in srgb,var(--navy-fg) 18%,transparent);color:var(--navy-fg)}
+.navy select option{color:#16213a}
+.navy .msg{color:var(--navy-fg);opacity:.85}
+.rate{display:flex;gap:6px}
+.rate button{background:none;border:0;font-size:1.7rem;line-height:1;color:color-mix(in srgb,var(--navy-fg) 30%,transparent);cursor:pointer;padding:2px}
+.rate button.on{color:var(--accent)}
+.dep-admin{border-color:color-mix(in srgb,var(--navy-fg) 25%,transparent)}
+.dep-admin .visit-row{border-color:color-mix(in srgb,var(--navy-fg) 15%,transparent)}
+@media (max-width:820px){.dep-form-wrap{grid-template-columns:1fr}}
+
+/* instagram */
+.insta{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,5vw,72px);align-items:center}
+.insta-card{display:grid;gap:18px;padding:32px;border-radius:28px;background:var(--bg-soft);text-decoration:none;border:1px solid var(--line);transition:border-color .2s}
+.insta-card:hover{border-color:var(--ink)}
+.insta-handle{font-family:var(--f-display);font-weight:700;font-size:1.5rem;letter-spacing:-.02em;overflow-wrap:anywhere}
+.insta-stats{display:flex;gap:24px;color:var(--ink-2);font-size:.94rem}
+.insta-stats b{color:var(--ink);font-size:1.15rem}
+@media (max-width:820px){.insta{grid-template-columns:1fr}}
+
+/* mural */
+.mural-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--ink)}
+.post{padding:28px 28px 28px 0;display:grid;gap:10px;align-content:start;min-width:0;border-bottom:1px solid var(--line)}
+.post + .post{padding-left:28px;border-left:1px solid var(--line)}
+.post:nth-child(3n+1){padding-left:0;border-left:0}
+.post .meta{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:.8rem;color:var(--ink-2)}
+.pill{font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:var(--blue-soft);color:var(--blue)}
+.pill.evento{background:var(--sun-soft);color:var(--ink)}
+.pill.urgente{background:var(--err);color:#fff}
+.post h3{font-size:1.3rem}
+.post p{color:var(--ink-2);font-size:.95rem;white-space:pre-line;overflow-wrap:anywhere}
+.post .del{justify-self:start;background:none;border:0;color:var(--err);font:600 .82rem var(--f-body);cursor:pointer;padding:0}
+.empty{grid-column:1/-1;padding:40px 0;color:var(--ink-2);border-bottom:1px solid var(--line)}
+@media (max-width:900px){.mural-grid{grid-template-columns:1fr}.post,.post + .post{padding:24px 0;border-left:0}}
+.admin{margin-top:40px;border:1px dashed var(--line);border-radius:22px;padding:24px;display:grid;gap:16px}
+.admin h3{font-size:1.2rem}
+
+/* forms */
+.field{display:grid;gap:6px;min-width:0}
+.field label{font-weight:600;font-size:.86rem}
+input,select,textarea{font:inherit;font-size:1rem;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px 14px;width:100%}
+textarea{min-height:90px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px var(--blue-soft)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+@media (max-width:600px){.row2,.row3{grid-template-columns:1fr}}
+.msg{font-size:.92rem;font-weight:500;color:var(--ink-2)}
+.msg.ok{color:var(--ok)}.msg.err{color:var(--err)}
+
+/* booking */
+.book-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(36px,5vw,72px);align-items:start}
+.book-side{display:grid;gap:22px;min-width:0}
+.checks{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.checks li{display:grid;grid-template-columns:22px 1fr;gap:10px;color:var(--ink-2)}
+.checks li::before{content:"";width:18px;height:18px;border-radius:50%;background:var(--sun-soft);border:5px solid var(--accent);margin-top:3px}
+.book-card{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:clamp(22px,3vw,36px);display:grid;gap:24px;min-width:0;box-shadow:0 30px 60px -40px rgba(30,30,40,.35)}
+.step-label{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2)}
+.days{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin}
+.day{flex:none;width:64px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:14px;padding:10px 0;text-align:center;cursor:pointer;font:inherit}
+.day small{display:block;font-size:.66rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-2)}
+.day b{display:block;font-size:1.25rem;font-weight:600;font-variant-numeric:tabular-nums}
+.day[aria-pressed="true"]{border-color:var(--ink);background:var(--ink);color:var(--bg)}
+.day[aria-pressed="true"] small{color:var(--bg)}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:8px}
+.slot{border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:12px;padding:10px 0;font:600 .95rem var(--f-body);font-variant-numeric:tabular-nums;cursor:pointer}
+.slot[aria-pressed="true"]{border-color:var(--accent);background:var(--accent);color:var(--accent-ink)}
+.slot:disabled{text-decoration:line-through;opacity:.4;cursor:not-allowed}
+.done{display:grid;gap:14px}
+.done .big{font-family:var(--f-display);font-weight:700;font-size:1.8rem}
+.summary{background:var(--bg-soft);border-radius:14px;padding:16px;font-size:.94rem;white-space:pre-line}
+.visits-list{display:grid;gap:10px}
+.visit-row{display:grid;grid-template-columns:160px 1fr auto;gap:12px;align-items:center;border-bottom:1px solid var(--line);padding:10px 0;font-size:.93rem}
+.visit-row .w{font-weight:700;font-variant-numeric:tabular-nums}
+@media (max-width:880px){.book-grid{grid-template-columns:1fr}}
+@media (max-width:600px){.visit-row{grid-template-columns:1fr}}
+.small-btn{background:none;border:1px solid var(--line);border-radius:999px;padding:5px 12px;font:600 .8rem var(--f-body);color:var(--ink);cursor:pointer;justify-self:start}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(36px,5vw,80px)}
+.faq{border-top:2px solid var(--ink)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:22px 40px 22px 0;font-family:var(--f-display);font-weight:600;font-size:1.18rem;letter-spacing:-.01em;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:18px;font:300 1.6rem var(--f-body);color:var(--ink-2);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 40px 22px 0;color:var(--ink-2)}
+@media (max-width:820px){.faq-grid{grid-template-columns:1fr}}
+
+/* contact & footer */
+.cta-band{background:var(--accent);color:var(--accent-ink)}
+.cta-band .lead{color:var(--accent-ink);opacity:.8}
+.cta-band .wrap{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center;padding-block:clamp(48px,6vw,72px)}
+.cta-actions{display:flex;gap:10px;flex-wrap:wrap}
+@media (max-width:760px){.cta-band .wrap{grid-template-columns:1fr}}
+footer{padding-block:56px 40px}
+.foot{display:grid;grid-template-columns:1.2fr .8fr 1fr 1.5fr .7fr;gap:32px}
+.foot .chip{background:var(--logo-chip);border-radius:12px;padding:6px 8px;justify-self:start;margin-left:-8px}
+.foot .chip img{height:58px;width:auto}
+.foot h4{margin:0 0 10px;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2);font-weight:700}
+.foot p,.foot a{font-size:.94rem}
+.foot a{text-decoration:none}
+.foot a:hover{text-decoration:underline}
+.foot .col{display:grid;gap:6px;align-content:start;min-width:0}
+.legal{margin-top:48px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.82rem;color:var(--ink-2)}
+@media (max-width:960px){.foot{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.foot{grid-template-columns:1fr}}
+
+.wa{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:40;display:flex;align-items:center;gap:10px;background:var(--wa);color:#fff;text-decoration:none;font-weight:700;font-size:.92rem;padding:13px 18px;border-radius:999px;box-shadow:0 14px 30px -12px rgba(0,0,0,.45)}
+.wa svg{width:20px;height:20px}
+@media (max-width:520px){.wa span{display:none}.wa{padding:14px}}
+</style>
+</head>
+<body>
+
+<div class="announce"><div class="wrap">
+  <span><b>Matrículas 2027 abertas.</b> <a href="#visita">Agende sua visita</a></span>
+  <span class="util"><a href="https://wa.me/553141123690?text=Ol%C3%A1!" target="_blank" rel="noopener">WhatsApp (31) 4112-3690</a><span>girafinhas.coordenacao@gmail.com</span><a href="https://www.instagram.com/colegiocristao.girafinhas/" target="_blank" rel="noopener">Instagram</a></span>
+</div></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Colégio Cristão Girafinhas, início">
+      <img src="img/logo.svg" alt="Colégio Cristão Girafinhas" width="106" height="50">
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="links" id="nav">
+      <a href="#escola">A escola</a>
+      <a href="#turmas">Turmas</a>
+      <a href="#rotina">Rotina</a>
+      <a href="#depoimentos">Depoimentos</a>
+      <a href="#mural">Mural</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a class="btn btn-primary" href="#visita">Agendar visita</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Educação infantil cristã em Contagem</span>
+          <h1>Educação infantil com <em>amor</em> e propósito.</h1>
+          <p class="lead">Do berçário ao Infantil 5, em período integral. Um ambiente seguro e acolhedor, com ensino cristão e uma equipe preparada que cuida de cada criança pelo nome.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#visita">Agende uma visita</a>
+            <a class="btn btn-ghost" href="#turmas">Conheça as turmas</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <div class="arch logo-hero"><img src="img/logo.svg" alt="Logo do Colégio Cristão Girafinhas: duas girafas, uma grande e uma pequena" width="1860" height="990"></div>
+        </div>
+      </div>
+      <div class="facts">
+        <div class="fact"><b>6</b><span>turmas, do berçário ao Infantil 5</span></div>
+        <div class="fact"><b>4,9<i>★</i></b><span>nota em 82 avaliações no Google</span></div>
+        <div class="fact"><b>19h</b><span>período integral para a rotina da família</span></div>
+        <div class="fact"><b>2026</b><span>inauguração do novo espaço</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="escola">
+    <div class="wrap">
+      <div class="sec-head split">
+        <div style="display:grid;gap:16px"><span class="eyebrow">Por que o Girafinhas</span><h2>Cuidando de vidas, <em>formando gerações.</em></h2></div>
+        <p class="lead">Uma escola conduzida de perto pelas diretoras Déia e Rebeka, com quatro compromissos que guiam cada decisão, da escolha da equipe ao novo espaço.</p>
+      </div>
+      <div class="pillars">
+        <div class="pillar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3v18M7 8h10"/></svg><h3>Fé como base</h3><p>Histórias bíblicas, oração e valores como amor, respeito e gratidão vividos na rotina.</p></div>
+        <div class="pillar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg><h3>Acolhimento</h3><p>Turmas pequenas e um olhar atento para cada criança, do primeiro dia de adaptação à formatura.</p></div>
+        <div class="pillar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><h3>Desenvolvimento</h3><p>Proposta pedagógica por fases, com brincadeira, linguagem, arte e preparação para o Fundamental.</p></div>
+        <div class="pillar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg><h3>Segurança</h3><p>Equipe treinada em primeiros socorros conforme a Lei Lucas e um espaço novo pensado para a primeira infância.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band soft" id="historia">
+    <div class="wrap story">
+      <aside class="panel">
+        <span class="eyebrow" style="color:var(--accent)">Desde o início</span>
+        <p class="panel-quote">“Ensina a criança no caminho em que deve andar, e, ainda quando for velho, não se desviará dele.”</p>
+        <span class="panel-cite">Provérbios 22:6</span>
+        <div class="panel-logo"><img src="img/logo.svg" alt="Colégio Cristão Girafinhas" width="168" height="79"></div>
+        <p class="panel-note"><b>O Girafinhas cresceu, e o nosso nome também.</b> O Centro de Educação Infantil Girafinhas agora é Colégio Cristão Girafinhas.</p>
+      </aside>
+      <div>
+        <div class="sec-head" style="margin-bottom:0">
+          <span class="eyebrow">Nossa história</span>
+          <h2>Começou na sala de casa. Hoje é <em>casa de muitas famílias.</em></h2>
+          <p class="lead">O Girafinhas nasceu de duas educadoras, Déia e Rebeka, que abriram a própria casa para cuidar das crianças do bairro como cuidariam das suas.</p>
+        </div>
+        <ol class="timeline">
+          <li><span class="when">O começo</span><div><h3>Na casa das diretoras</h3><p>As primeiras turmas funcionavam na casa da Déia e da Rebeka: poucas crianças, rotina de família, oração antes do lanche e muito colo.</p></div></li>
+          <li><span class="when">Crescimento</span><div><h3>Uma família por vez</h3><p>A indicação de pais para pais fez a escola crescer. Vieram novas turmas, do berçário ao Infantil 5, o período integral e uma equipe escolhida com o mesmo cuidado.</p></div></li>
+          <li><span class="when">Ago 2026</span><div><h3>Um novo capítulo</h3><p>A escola se mudou para um espaço novo na Av. Riacho das Pedras, planejado para receber mais crianças com conforto e segurança.</p></div></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="turmas">
+    <div class="wrap">
+      <div class="sec-head split">
+        <div style="display:grid;gap:16px"><span class="eyebrow">Turmas</span><h2>Cada fase com o cuidado <em>que ela pede.</em></h2></div>
+        <p class="lead">Turmas organizadas por faixa etária, com rotina e objetivos pensados para cada idade.</p>
+      </div>
+      <div class="classes">
+        <div class="class"><span class="age">0–1<small>ano</small></span><h3>Berçário</h3><p>Ambiente calmo e seguro, rotina de sono e alimentação, estímulos sensoriais e muito colo.</p></div>
+        <div class="class"><span class="age">1<small>ano</small></span><h3>Infantil 1</h3><p>Primeiros passos e primeiras palavras. Movimento, música e autonomia no dia a dia.</p></div>
+        <div class="class"><span class="age">2<small>anos</small></span><h3>Infantil 2</h3><p>Linguagem, convivência e desfralde em parceria com a família. Histórias todos os dias.</p></div>
+        <div class="class"><span class="age">3<small>anos</small></span><h3>Infantil 3</h3><p>Coordenação motora, cores e formas, e projetos que despertam a curiosidade.</p></div>
+        <div class="class"><span class="age">4<small>anos</small></span><h3>Infantil 4</h3><p>Contato com letras e números, trabalho em grupo e expressão pela arte.</p></div>
+        <div class="class"><span class="age">5<small>anos</small></span><h3>Infantil 5</h3><p>Preparação para o Ensino Fundamental: pré-alfabetização, raciocínio lógico e autonomia.</p></div>
+      </div>
+      <div class="periods">
+        <div class="period main"><span class="t">Integral</span><h3>Até 19h</h3><p>Rotina completa com refeições, descanso, atividades pedagógicas e extracurriculares.</p></div>
+        <div class="period"><span class="t">Meio período</span><h3>Manhã ou tarde</h3><p>Para famílias que preferem uma rotina mais curta. Consulte as vagas por turma.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band soft" id="rotina">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Um dia no Girafinhas</span>
+        <h2>Uma rotina que dá <em>segurança</em> à criança.</h2>
+        <p class="lead">Previsibilidade ajuda os pequenos a se sentirem em casa. É assim que o dia se organiza.</p>
+      </div>
+      <ol class="day-steps">
+        <li><h3>Acolhida</h3><p>Chegada com calma, roda de conversa e oração.</p></li>
+        <li><h3>Lanche</h3><p>Hora de comer junto e aprender hábitos.</p></li>
+        <li><h3>Atividades</h3><p>Projetos pedagógicos, arte e música.</p></li>
+        <li><h3>Almoço</h3><p>Refeição com acompanhamento da equipe.</p></li>
+        <li><h3>Descanso</h3><p>Momento de sono e tranquilidade.</p></li>
+        <li><h3>Brincar</h3><p>Pátio, movimento e brincadeiras até a saída.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="band" id="atividades">
+    <div class="wrap acts-grid">
+      <div class="acts-photo"><img src="img/corda.jpg" alt="Aluno do Girafinhas brincando de cabo de guerra na quadra" width="380" height="760"></div>
+      <div>
+        <div class="sec-head" style="margin-bottom:28px">
+          <span class="eyebrow">Atividades</span>
+          <h2>Aprender <em>brincando</em>, todos os dias.</h2>
+        </div>
+        <div class="acts">
+          <div class="act"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3v18M7 8h10"/></svg><b>Educação cristã</b><span>Histórias bíblicas e louvor</span></div>
+          <div class="act"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg><b>Musicalização</b><span>Ritmo, canto e escuta</span></div>
+          <div class="act"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 6h16M4 12h10M4 18h6"/></svg><b>Inglês</b><span>Músicas, jogos e rotina</span></div>
+          <div class="act"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="5" r="2"/><path d="M12 7v6l-4 7M12 13l4 7M7 10h10"/></svg><b>Psicomotricidade</b><span>Equilíbrio e coordenação</span></div>
+          <div class="act"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21c-5 0-8-3-8-8 4 0 8 3 8 8zm0 0c5 0 8-3 8-8-4 0-8 3-8 8zM12 13V3"/></svg><b>Natureza</b><span>Passeios e ciência na prática</span></div>
+          <div class="act"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 20l4-4M14 4l6 6-9 9-6-6z"/></svg><b>Artes</b><span>Pintura, modelagem e colagem</span></div>
+          <div class="act"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 19V5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2z"/></svg><b>Contação de histórias</b><span>Leitura todos os dias</span></div>
+          <div class="act"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><b>Datas especiais</b><span>Festa das Nações, 7 de Setembro, Dia das Crianças</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band navy" id="depoimentos">
+    <div class="wrap">
+      <div class="dep-head">
+        <div style="display:grid;gap:16px"><span class="eyebrow" style="color:var(--accent)">Depoimentos</span><h2>O que as famílias dizem.</h2></div>
+        <p style="opacity:.75;max-width:40ch">Nota 4,9 em 82 avaliações no Google, e depoimentos enviados pelas próprias famílias.</p>
+      </div>
+      <div class="deps" id="deps">
+        <figure class="dep feature"><span class="stars" aria-label="5 estrelas">★★★★★</span><blockquote>“Conheço de perto o trabalho da Déia e da Rebeka e posso afirmar a integridade, responsabilidade e o compromisso que elas têm com cada criança. O Colégio Girafinhas é referência em educação infantil, com um ambiente seguro, acolhedor e profissionais realmente preparados.”</blockquote><figcaption><b>Tabada Microni</b><span>Avaliação no Google</span></figcaption></figure>
+        <figure class="dep"><span class="stars" aria-label="5 estrelas">★★★★★</span><blockquote>“Gente, esse acolhimento não tem preço e não encontrei em nenhum outro lugar!”</blockquote><figcaption><b>Áurea Isabel Corradi de Oliveira</b><span>Avaliação no Google</span></figcaption></figure>
+        <figure class="dep"><span class="stars" aria-label="5 estrelas">★★★★★</span><blockquote>“Escola linda, organizada, funcionários super atenciosos.”</blockquote><figcaption><b>Natalia Moura</b><span>Avaliação no Google</span></figcaption></figure>
+      </div>
+      <div class="dep-form-wrap">
+        <div style="display:grid;gap:10px;align-content:start">
+          <h3>Sua família faz parte do Girafinhas?</h3>
+          <p style="opacity:.8">Conte como é a experiência do seu filho na escola. Seu depoimento é enviado para a coordenação pelo WhatsApp e, depois de aprovado, aparece aqui.</p>
+        </div>
+        <form id="depForm" class="dep-form">
+          <div class="row2">
+            <div class="field"><label for="dNome">Seu nome</label><input id="dNome" required maxlength="60" autocomplete="name"></div>
+            <div class="field"><label for="dRel">Você é</label><select id="dRel"><option>Mãe de aluno</option><option>Pai de aluno</option><option>Avó ou avô de aluno</option><option>Responsável por aluno</option><option>Ex-aluno ou família antiga</option></select></div>
+          </div>
+          <div class="field"><label for="dNota">Nota</label><div class="rate" id="dNota" role="radiogroup" aria-label="Nota de 1 a 5"></div></div>
+          <div class="field"><label for="dTexto">Depoimento</label><textarea id="dTexto" required maxlength="600" placeholder="O que você mais gosta no Girafinhas?"></textarea></div>
+          <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap"><button class="btn btn-primary" type="submit">Enviar pelo WhatsApp</button><span class="msg" id="depMsg" role="status"></span></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap insta">
+      <div style="display:grid;gap:16px"><span class="eyebrow">Dia a dia</span><h2>Acompanhe a rotina <em>no Instagram.</em></h2><p class="lead">Eventos, conquistas da turma e os bastidores do novo espaço, todos os dias.</p></div>
+      <a class="insta-card" href="https://www.instagram.com/colegiocristao.girafinhas/" target="_blank" rel="noopener">
+        <span class="insta-handle">@colegiocristao.girafinhas</span>
+        <span class="insta-stats"><span><b>2.735</b> seguidores</span><span><b>238</b> publicações</span></span>
+        <span class="btn btn-primary" style="justify-self:start">Seguir no Instagram</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="band soft" id="mural">
+    <div class="wrap">
+      <div class="sec-head split">
+        <div style="display:grid;gap:16px"><span class="eyebrow">Mural</span><h2>Comunicados e eventos</h2></div>
+        <p class="lead">Avisos, datas importantes e eventos publicados pela direção.</p>
+      </div>
+      <div class="mural-grid" id="posts">
+        <div class="empty">Os comunicados e eventos da escola aparecem aqui assim que a direção publicar.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="visita">
+    <div class="wrap book-grid">
+      <div class="book-side">
+        <span class="eyebrow">Agende uma visita</span>
+        <h2>Venha conhecer <em>o novo espaço.</em></h2>
+        <p class="lead">Escolha o dia e o horário. Seu pedido vai para a nossa equipe pelo WhatsApp, e a coordenação confirma com você. A visita dura cerca de 40 minutos.</p>
+        <ul class="checks">
+          <li>Conheça as salas, o pátio e a rotina das turmas</li>
+          <li>Entenda a proposta pedagógica e os valores da escola</li>
+          <li>Tire dúvidas sobre vagas, horários e investimento</li>
+        </ul>
+        <p style="color:var(--ink-2);font-size:.95rem">Prefere combinar outro horário? <a class="link" href="https://wa.me/553141123690?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20ao%20Girafinhas." target="_blank" rel="noopener">Fale com a nossa equipe no WhatsApp</a></p>
+      </div>
+      <div class="book-card">
+        <form id="bookForm" style="display:grid;gap:24px">
+          <div style="display:grid;gap:10px">
+            <span class="step-label">1 · Dia</span>
+            <div class="days" id="days" role="group" aria-label="Dias disponíveis"></div>
+          </div>
+          <div style="display:grid;gap:10px">
+            <span class="step-label">2 · Horário</span>
+            <div class="slots" id="slots" role="group" aria-label="Horários"></div>
+          </div>
+          <div style="display:grid;gap:14px">
+            <span class="step-label">3 · Seus dados</span>
+            <div class="row2">
+              <div class="field"><label for="bNome">Seu nome</label><input id="bNome" required maxlength="80" autocomplete="name"></div>
+              <div class="field"><label for="bFone">WhatsApp</label><input id="bFone" required maxlength="20" inputmode="tel" autocomplete="tel" placeholder="(31) 9 0000-0000"></div>
+            </div>
+            <div class="row2">
+              <div class="field"><label for="bCrianca">Nome da criança</label><input id="bCrianca" maxlength="80"></div>
+              <div class="field"><label for="bIdade">Idade da criança</label><select id="bIdade"><option>Berçário (até 1 ano)</option><option>1 ano</option><option>2 anos</option><option>3 anos</option><option>4 anos</option><option>5 anos</option><option>Ainda vai nascer</option></select></div>
+            </div>
+            <div class="field"><label for="bOrigem">Como conheceu o Girafinhas?</label><select id="bOrigem"><option>Indicação de outra família</option><option>Instagram</option><option>Google</option><option>Passei na frente da escola</option><option>Outro</option></select></div>
+            <div class="field"><label for="bObs">Observações (opcional)</label><textarea id="bObs" maxlength="500" style="min-height:64px"></textarea></div>
+          </div>
+          <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+            <button class="btn btn-primary" id="bookBtn" type="submit" disabled>Enviar pedido de visita</button>
+            <span class="msg" id="bookMsg" role="status">Escolha um dia e um horário.</span>
+          </div>
+        </form>
+        <div class="done" id="bookDone" hidden></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band soft" id="duvidas">
+    <div class="wrap faq-grid">
+      <div class="sec-head" style="margin:0;align-content:start">
+        <span class="eyebrow">Dúvidas frequentes</span>
+        <h2>O que os pais <em>mais perguntam.</em></h2>
+        <p class="lead">Não achou sua resposta? Fale com a nossa equipe: a coordenação responde pelo WhatsApp.</p>
+        <a class="link" style="justify-self:start" href="https://wa.me/553141123690?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20Girafinhas." target="_blank" rel="noopener">Enviar uma dúvida</a>
+      </div>
+      <div class="faq">
+        <details><summary>Quais idades a escola atende?</summary><p>Do berçário ao Infantil 5, com turmas separadas por faixa etária. Na visita, a direção explica a idade de entrada em cada turma.</p></details>
+        <details><summary>Qual é o horário de funcionamento?</summary><p>O período integral vai até as 19h. Também há opção de meio período, conforme a disponibilidade de vagas.</p></details>
+        <details><summary>As matrículas para 2027 já estão abertas?</summary><p>Sim. Agende uma visita para conhecer o espaço e garantir a vaga do seu filho.</p></details>
+        <details><summary>Quanto custa a mensalidade?</summary><p>Os valores são apresentados na visita, junto com a proposta pedagógica e as opções de período.</p></details>
+        <details><summary>A equipe está preparada para emergências?</summary><p>Sim. A equipe passou pelo treinamento de primeiros socorros previsto na Lei Lucas.</p></details>
+        <details><summary>Como falo com a escola?</summary><p>Pelo WhatsApp (31) 4112-3690 ou pelo e-mail girafinhas.coordenacao@gmail.com. O atendimento presencial é com hora marcada, de segunda a sexta.</p></details>
+        <details><summary>Como funciona a adaptação?</summary><p>A adaptação é feita aos poucos e em conversa com a família, respeitando o tempo de cada criança.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="wrap">
+      <div style="display:grid;gap:10px"><h2>Fale com a nossa equipe.</h2><p class="lead">Tire suas dúvidas, conheça a proposta da escola e garanta a vaga do seu filho para 2027. As vagas por turma são limitadas.</p></div>
+      <div class="cta-actions"><a class="btn btn-wa" href="https://wa.me/553141123690?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20equipe%20do%20Girafinhas." target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3z"/></svg>Falar no WhatsApp</a><a class="btn" href="#visita" style="background:var(--navy);color:var(--navy-fg)">Agendar visita</a></div>
+    </div>
+  </section>
+</main>
+
+<footer id="contato">
+  <div class="wrap">
+    <div class="foot">
+      <div class="col">
+        <div class="chip"><img src="img/logo.svg" alt="Colégio Cristão Girafinhas" width="123" height="58"></div>
+        <p style="color:var(--ink-2);max-width:30ch">Educação infantil cristã em Contagem, MG. Berçário ao Infantil 5, em período integral.</p>
+      </div>
+      <div class="col"><h4>A escola</h4><a href="#historia">Nossa história</a><a href="#turmas">Turmas</a><a href="#rotina">Rotina</a><a href="#atividades">Atividades</a><a href="#depoimentos">Depoimentos</a></div>
+      <div class="col"><h4>Endereço</h4><p>Av. Riacho das Pedras, 568<br>Jardim Riacho das Pedras<br>Contagem, MG · 32241-320</p><a class="link" style="justify-self:start" href="https://www.google.com/maps/search/?api=1&query=Col%C3%A9gio%20Crist%C3%A3o%20Girafinhas%20Av.%20Riacho%20das%20Pedras%20568%20Contagem" target="_blank" rel="noopener">Ver rotas</a></div>
+      <div class="col"><h4>Contato</h4><a href="https://wa.me/553141123690?text=Ol%C3%A1!" target="_blank" rel="noopener">WhatsApp <span id="fone">(31) 4112-3690</span></a><p id="mail" style="overflow-wrap:anywhere">girafinhas.coordenacao@gmail.com</p><div style="display:flex;gap:6px;flex-wrap:wrap"><button class="small-btn" data-copy="(31) 4112-3690" data-target="fone">Copiar número</button><button class="small-btn" data-copy="girafinhas.coordenacao@gmail.com" data-target="mail">Copiar e-mail</button></div><p style="font-size:.85rem;color:var(--ink-2)">Atendimento com hora marcada, de segunda a sexta</p></div>
+      <div class="col"><h4>Siga</h4><a href="https://www.instagram.com/colegiocristao.girafinhas/" target="_blank" rel="noopener">Instagram</a><a href="#mural">Mural da escola</a><a href="#visita">Agendar visita</a></div>
+    </div>
+    <div class="legal"><span>© 2026 Colégio Cristão Girafinhas</span><span>Berçário ao Infantil 5 · Contagem, MG</span></div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/553141123690?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20matr%C3%ADculas%202027." target="_blank" rel="noopener" aria-label="Tirar dúvidas no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3z"/></svg>
+  <span>Fale com a nossa equipe</span>
+</a>
+
+<script src="mural.js"></script>
+<script src="site.js"></script>
+</body>
+</html>
