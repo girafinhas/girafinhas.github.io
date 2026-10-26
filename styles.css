@@ -653,3 +653,134 @@ nav.links{font-size:.9rem;gap:24px}
   .day-steps p,.act span,.pillar p{font-size:.86rem}
   .cta-band h2{font-size:1.6rem}
 }
+
+/* ===== escala geral menor (v7) ===== */
+body{font-size:15px}
+h1,.hero h1{font-size:clamp(2.1rem,4.6vw,3.6rem)}
+h2{font-size:clamp(1.45rem,2.6vw,2.05rem)}
+h3{font-size:1.08rem}
+.lead{font-size:.98rem}
+.eyebrow{font-size:.68rem}
+.band{padding-block:clamp(40px,5.5vw,72px)}
+.sec-head{margin-bottom:28px;gap:10px}
+.fact b{font-size:clamp(1.8rem,3vw,2.4rem)}
+.btn{font-size:.9rem;padding:11px 20px}
+.btn-lg{padding:13px 24px;font-size:.94rem}
+.grow-title{font-size:1.1rem}
+.rungs a{padding:8px 10px 8px 0}
+.rungs b{font-size:.98rem}
+
+/* ===== páginas internas em blocos ===== */
+.inner{background:var(--bg-soft)}
+.inner main{padding-bottom:24px}
+.inner .page-hero{background:var(--bg);padding-block:clamp(24px,3.5vw,44px) clamp(18px,2.5vw,28px)}
+.inner .page-hero h1{font-size:clamp(1.8rem,3.4vw,2.6rem)}
+.inner .page-hero .lead{font-size:.95rem}
+.inner .subnav{background:var(--header-bg)}
+.inner .band,.inner .band.soft{background:none;border:0;padding-block:12px}
+.inner main > .band:first-of-type,.inner .subnav + .band{padding-top:24px}
+.inner .band > .wrap{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:clamp(20px,3vw,34px);max-width:calc(var(--max) - 40px)}
+.inner .band.navy{padding-block:12px}
+.inner .band.navy > .wrap{background:var(--navy);border-color:var(--navy);color:var(--navy-fg)}
+.inner .sec-head{margin-bottom:22px}
+.inner .sec-head.split{grid-template-columns:1fr;gap:8px;align-items:start}
+.inner h2{font-size:clamp(1.3rem,2.2vw,1.7rem)}
+.inner .sec-head .lead{font-size:.92rem;max-width:70ch}
+.inner .next-page{padding-block:12px 40px}
+.inner .next-page .wrap{max-width:calc(var(--max) - 40px)}
+.inner .cta-band{margin:12px auto 40px;max-width:calc(var(--max) - 40px);border-radius:22px;width:calc(100% - 40px)}
+.inner .cta-band .wrap{padding:28px clamp(20px,3vw,34px)}
+.inner .cta-band h2{font-size:1.5rem}
+
+/* turmas em cartões */
+.inner .classes{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;border:0}
+.inner .class{grid-template-columns:auto 1fr;grid-template-rows:auto auto;gap:2px 12px;padding:14px 16px;border:1px solid var(--line);border-radius:16px;align-items:center;background:var(--bg)}
+.inner .class .age{grid-row:span 2;font-size:1.5rem;min-width:52px}
+.inner .class .age small{display:block;margin:2px 0 0;font-size:.7rem}
+.inner .class p{font-size:.84rem;grid-column:2}
+.inner .periods{margin-top:12px;gap:10px}
+.inner .period{padding:16px 18px;gap:4px;border-radius:16px}
+.inner .period h3{font-size:1rem}
+.inner .period p{font-size:.86rem}
+
+/* rotina e atividades mais compactas */
+.inner .day-steps li{padding:18px 14px 0 0}
+.inner .day-steps p{font-size:.84rem}
+.inner .acts-grid{grid-template-columns:220px 1fr;gap:28px;align-items:start}
+.inner .acts-photo{aspect-ratio:3/4;border-radius:18px}
+.inner .acts{gap:0 24px}
+.inner .act{padding:12px 0}
+.inner .act b{font-size:.94rem}
+.inner .act span{font-size:.82rem}
+
+/* escola: história em blocos */
+.inner .story{grid-template-columns:300px 1fr;gap:28px}
+.inner .panel{position:static;padding:22px;border-radius:18px;gap:12px}
+.inner .panel-quote{font-size:1.15rem}
+.inner .panel-logo img{height:44px}
+.inner .panel-note{font-size:.84rem}
+.inner .timeline{margin-top:18px;grid-template-columns:repeat(3,1fr);gap:10px}
+.inner .timeline li,.inner .timeline li:last-child{grid-template-columns:1fr;gap:6px;padding:16px;border:1px solid var(--line);border-radius:16px;background:var(--bg)}
+.inner .timeline .when{padding:0;font-size:.66rem}
+.inner .timeline h3{font-size:1rem}
+.inner .timeline p{font-size:.84rem;margin-top:4px}
+.inner .pillars{grid-template-columns:repeat(4,1fr);gap:10px}
+.inner .pillar,.inner .pillar:first-child{padding:16px;border:1px solid var(--line);border-radius:16px;background:var(--bg);gap:8px}
+.inner .pillar p{font-size:.84rem}
+.inner .pillar svg{width:24px;height:24px}
+.inner .insta{grid-template-columns:1fr auto;gap:20px}
+.inner .insta .lead{font-size:.9rem}
+.inner .insta-card{padding:18px 22px;gap:10px;border-radius:18px}
+.inner .insta-handle{font-size:1.1rem}
+
+/* depoimentos, mural, visita, dúvidas */
+.inner .dep-head{margin-bottom:22px}
+.inner .deps{gap:10px}
+.inner .dep{padding:18px;border-radius:16px;gap:10px}
+.inner .dep blockquote{font-size:1rem}
+.inner .dep.feature blockquote{font-size:clamp(1.1rem,1.8vw,1.35rem)}
+.inner .dep-form-wrap{margin-top:28px;padding-top:24px}
+.inner .mural-grid{border-top:0;gap:10px}
+.inner .post,.inner .post + .post,.inner .post:nth-child(3n+1){padding:18px;border:1px solid var(--line);border-radius:16px;background:var(--bg)}
+.inner .book-grid{gap:28px}
+.inner .book-card{box-shadow:none;background:var(--bg)}
+.inner .faq summary{font-size:.98rem;padding:15px 36px 15px 0}
+.inner .faq summary::after{top:11px}
+.inner .faq details p{font-size:.9rem}
+
+@media (max-width:960px){
+  .inner .classes,.inner .timeline,.inner .pillars{grid-template-columns:1fr 1fr}
+  .inner .story,.inner .acts-grid{grid-template-columns:1fr}
+  .inner .acts-photo{max-width:none;aspect-ratio:16/9}
+}
+@media (max-width:600px){
+  body{font-size:14.5px}
+  h1,.hero h1{font-size:clamp(1.7rem,8vw,2.05rem)}
+  h2{font-size:clamp(1.3rem,6vw,1.6rem)}
+  .lead,.hero .lead{font-size:.92rem}
+  .inner .page-hero h1{font-size:clamp(1.55rem,7.4vw,1.85rem)}
+  .inner .band > .wrap,.inner .next-page .wrap{margin-inline:12px;padding:18px 16px;border-radius:18px;max-width:none}
+  .inner .band{padding-block:6px}
+  .inner .subnav + .band{padding-top:14px}
+  .inner h2{font-size:1.25rem}
+  .inner .sec-head{margin-bottom:16px}
+  .inner .sec-head .lead{display:none}
+  .inner .classes,.inner .pillars{grid-template-columns:1fr 1fr;gap:8px}
+  .inner .class{grid-template-columns:1fr;padding:12px}
+  .inner .class .age{grid-row:auto;font-size:1.3rem}
+  .inner .class .age small{display:inline;margin-left:4px}
+  .inner .class p{grid-column:1;font-size:.78rem}
+  .inner .timeline{grid-template-columns:1fr;gap:8px}
+  .inner .pillar{padding:12px}
+  .inner .pillar h3{font-size:.95rem}
+  .inner .pillar p{font-size:.78rem}
+  .inner .acts{grid-template-columns:1fr 1fr;gap:0 14px}
+  .inner .act{grid-template-columns:1fr;gap:2px}
+  .inner .act svg{display:none}
+  .inner .acts-photo{display:none}
+  .inner .insta{grid-template-columns:1fr}
+  .inner .cta-band{width:auto;margin:6px 12px 28px}
+  .inner .cta-band .wrap{padding:20px 16px}
+  .inner .cta-band h2{font-size:1.25rem}
+  .inner .day-steps{grid-template-columns:1fr 1fr;row-gap:22px}
+}
