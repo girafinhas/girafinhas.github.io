@@ -25,11 +25,12 @@
   function renderDays(){daysEl.innerHTML='';days.forEach(function(d){var b=document.createElement('button');b.type='button';b.className='day';b.setAttribute('aria-pressed',iso(d)===selDay);b.innerHTML='<small>'+WD[d.getDay()]+'</small><b>'+d.getDate()+'</b><small>'+MES[d.getMonth()]+'</small>';b.onclick=function(){selDay=iso(d);selHour=null;renderDays();renderSlots()};daysEl.appendChild(b)})}
   function renderSlots(){slotsEl.innerHTML='';HOURS.forEach(function(h){var b=document.createElement('button');b.type='button';b.className='slot';b.textContent=h;b.setAttribute('aria-pressed',selHour===h);b.onclick=function(){selHour=h;renderSlots()};slotsEl.appendChild(b)});
     btn.disabled=!selHour;msg.className='msg';msg.textContent=selHour?fmt(selDay)+' às '+selHour:'Escolha um dia e um horário.'}
-  renderDays();renderSlots();
+  if(daysEl){renderDays();renderSlots();}
   (function(){var nv=document.getElementById('nextVisit');if(!nv)return;var d=days[0],t=new Date();t.setHours(0,0,0,0);t.setDate(t.getDate()+1);
     nv.textContent=(d.getTime()===t.getTime()?'Amanhã, ':'')+WD[d.getDay()]+' '+d.getDate()+' de '+MES[d.getMonth()]+' · '+HOURS[0]})();
 
-  document.getElementById('bookForm').addEventListener('submit',function(e){
+  var bookForm=document.getElementById('bookForm');
+  if(bookForm)bookForm.addEventListener('submit',function(e){
     e.preventDefault();if(!selHour)return;
     function v(id){return document.getElementById(id).value.trim()}
     var nome=v('bNome'),fone=v('bFone');
@@ -53,8 +54,9 @@
   /* ---------- depoimentos ---------- */
   var nota=5,rateEl=document.getElementById('dNota');
   function renderRate(){rateEl.innerHTML='';for(var i=1;i<=5;i++)(function(i){var b=document.createElement('button');b.type='button';b.textContent='★';b.className=i<=nota?'on':'';b.setAttribute('role','radio');b.setAttribute('aria-checked',i===nota);b.setAttribute('aria-label',i+' estrela'+(i>1?'s':''));b.onclick=function(){nota=i;renderRate()};rateEl.appendChild(b)})(i)}
-  renderRate();
-  document.getElementById('depForm').addEventListener('submit',function(e){
+  var depForm=document.getElementById('depForm');
+  if(rateEl)renderRate();
+  if(depForm)depForm.addEventListener('submit',function(e){
     e.preventDefault();var m=document.getElementById('depMsg');function g(id){return document.getElementById(id).value.trim()}
     if(!g('dNome')||!g('dTexto')){m.className='msg err';m.textContent='Preencha seu nome e o depoimento.';return}
     var txt='Depoimento para o site do Girafinhas\n\n'+g('dNome')+' ('+g('dRel')+') · '+'★'.repeat(nota)+'\n"'+g('dTexto')+'"';
@@ -65,7 +67,7 @@
 
   /* ---------- mural ---------- */
   var posts=document.getElementById('posts'),items=window.MURAL||[];
-  if(items.length){posts.innerHTML='';items.forEach(function(x){
+  if(posts&&items.length){posts.innerHTML='';items.forEach(function(x){
     var a=document.createElement('article');a.className='post';
     var meta=document.createElement('div');meta.className='meta';
     var tipo=['evento','urgente'].indexOf(x.tipo)>=0?x.tipo:'comunicado';
@@ -73,4 +75,11 @@
     if(x.data){var w=document.createElement('span');w.textContent=fmt(x.data);meta.appendChild(w)}
     var h=document.createElement('h3');h.textContent=x.titulo||'';var p=document.createElement('p');p.textContent=x.texto||'';
     a.append(meta,h,p);posts.appendChild(a)})}
+
+  /* voltar ao topo + atalho ativo */
+  var tt=document.querySelector('.totop');
+  if(tt){var onS=function(){tt.classList.toggle('show',window.scrollY>900)};addEventListener('scroll',onS,{passive:true});onS()}
+  var sn=document.querySelectorAll('.subnav a');
+  if(sn.length&&'IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){sn.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-40% 0px -55% 0px'});
+    sn.forEach(function(a){var t=document.querySelector(a.getAttribute('href'));if(t)io.observe(t)})}
 })();
