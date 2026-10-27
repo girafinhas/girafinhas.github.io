@@ -93,16 +93,18 @@
     a.append(meta,h,p);posts.appendChild(a)})}
 
   /* voltar ao topo + atalho ativo */
-  /* girafa que estica o pescoço (na horizontal) com a rolagem */
+  /* girafa que estica o pescoço (vertical) com a rolagem: até ~75% da tela */
   var nu=document.querySelector('.neckup');
   if(nu){
     var stem=nu.querySelector('.nu-stem'),head=nu.querySelector('.nu-head'),ticking=false;
     var upd=function(){ticking=false;
       var max=document.documentElement.scrollHeight-innerHeight,pr=max>0?Math.min(1,Math.max(0,scrollY/max)):0;
-      var W=document.documentElement.clientWidth-34;
-      stem.style.transform='scaleX('+pr+')';
-      head.style.transform='translateX('+(pr*W)+'px)';
-      nu.classList.toggle('show',scrollY>40);nu.classList.toggle('full',pr>0.98)};
+      var bottom=parseFloat(getComputedStyle(nu).bottom)||16;
+      var len=Math.max(120,(innerHeight-68-bottom-40)*0.75);
+      var k=0.06+pr*0.94;
+      stem.style.height=len+'px';stem.style.transform='scaleY('+k+')';
+      head.style.transform='translateY('+(-k*len)+'px)';
+      nu.classList.toggle('show',scrollY>160);nu.classList.toggle('full',pr>0.97)};
     addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(upd)}},{passive:true});
     addEventListener('resize',upd);upd();
     head.addEventListener('click',function(){nu.classList.add('go');window.scrollTo({top:0,behavior:'smooth'});setTimeout(function(){nu.classList.remove('go')},900)});
