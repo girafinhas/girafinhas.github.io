@@ -1388,3 +1388,6 @@ html.snap{scroll-snap-type:none}
   .tile{flex-direction:row;padding:12px}
 }
 @media (max-width:600px){.tile b{font-size:.84rem;overflow-wrap:anywhere}.tile{gap:8px}}
+
+.store-hint{display:block;font-size:.8rem;color:var(--ink-2);margin-top:8px}
+footer#contato{scroll-margin-top:140px}

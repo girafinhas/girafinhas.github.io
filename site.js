@@ -94,8 +94,11 @@
 
   /* voltar ao topo + atalho ativo */
   var sn=document.querySelectorAll('.subnav a');
-  if(sn.length&&'IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){sn.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-40% 0px -55% 0px'});
-    sn.forEach(function(a){var t=document.querySelector(a.getAttribute('href'));if(t)io.observe(t)})}
+  var setOn=function(id){sn.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+id)})};
+  if(sn.length&&'IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)setOn(e.target.id)})},{rootMargin:'-40% 0px -55% 0px'});
+    sn.forEach(function(a){var t=document.querySelector(a.getAttribute('href'));if(t)io.observe(t);a.addEventListener('click',function(){setTimeout(function(){setOn(a.getAttribute('href').slice(1))},600)})})}
+  if(sn.length){var last=sn[sn.length-1].getAttribute('href').slice(1);
+    addEventListener('scroll',function(){if(innerHeight+scrollY>=document.documentElement.scrollHeight-8)setOn(last)},{passive:true})}
 
 
 })();
