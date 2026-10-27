@@ -13,9 +13,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="styles.css?v=28">
+<link rel="stylesheet" href="styles.css?v=29">
 </head>
-<body id="inicio" class="inner">
+<body id="inicio" class="inner pg-visita">
 <div class="announce"><div class="wrap">
   <span><b>Matrículas 2027 abertas.</b> <a href="visita.html">Agende sua visita</a></span>
   <span class="util"><a class="util-app" href="pais.html">App da família</a><a href="https://wa.me/553141123690?text=Ol%C3%A1!" target="_blank" rel="noopener">WhatsApp (31) 4112-3690</a><span>girafinhas.coordenacao@gmail.com</span><a class="util-ig" href="https://www.instagram.com/colegiocristao.girafinhas/" target="_blank" rel="noopener"><svg class="ig-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>Instagram</a></span>
@@ -89,7 +89,7 @@
         <p style="color:var(--ink-2);font-size:.95rem">Prefere combinar outro horário? <a class="link" href="https://wa.me/553141123690?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20visita%20ao%20Girafinhas." target="_blank" rel="noopener">Fale com a nossa equipe no WhatsApp</a></p>
       </div>
       <div class="book-card">
-        <form id="bookForm" style="display:grid;gap:24px">
+        <form id="bookForm" novalidate style="display:grid;gap:24px">
           <div style="display:grid;gap:10px">
             <span class="step-label">1 · Dia</span>
             <div class="days" id="days" role="group" aria-label="Dias disponíveis"></div>
@@ -105,10 +105,10 @@
               <div class="field"><label for="bFone">WhatsApp</label><input id="bFone" required maxlength="20" inputmode="tel" autocomplete="tel" placeholder="(31) 9 0000-0000"></div>
             </div>
             <div class="row2">
-              <div class="field"><label for="bCrianca">Nome da criança</label><input id="bCrianca" maxlength="80"></div>
-              <div class="field"><label for="bIdade">Idade da criança</label><select id="bIdade"><option>Berçário (até 1 ano)</option><option>1 ano</option><option>2 anos</option><option>3 anos</option><option>4 anos</option><option>5 anos</option><option>Ainda vai nascer</option></select></div>
+              <div class="field"><label for="bCrianca">Nome da criança</label><input id="bCrianca" required maxlength="80" autocomplete="off"></div>
+              <div class="field"><label for="bIdade">Idade da criança</label><select id="bIdade" required><option value="" selected disabled>Selecione</option><option>Berçário (até 1 ano)</option><option>1 ano</option><option>2 anos</option><option>3 anos</option><option>4 anos</option><option>5 anos</option><option>Ainda vai nascer</option></select></div>
             </div>
-            <div class="field"><label for="bOrigem">Como conheceu o Girafinhas?</label><select id="bOrigem"><option>Indicação de outra família</option><option>Instagram</option><option>Google</option><option>Passei na frente da escola</option><option>Outro</option></select></div>
+            <div class="field"><label for="bOrigem">Como conheceu o Girafinhas?</label><select id="bOrigem" required><option value="" selected disabled>Selecione</option><option>Indicação de outra família</option><option>Instagram</option><option>Google</option><option>Passei na frente da escola</option><option>Outro</option></select></div>
             <div class="field"><label for="bObs">Observações (opcional)</label><textarea id="bObs" maxlength="500" style="min-height:64px"></textarea></div>
           </div>
           <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">
@@ -151,6 +151,6 @@
 
 
 <script src="mural.js?v=20"></script>
-<script src="site.js?v=24"></script>
+<script src="site.js?v=29"></script>
 </body>
 </html>

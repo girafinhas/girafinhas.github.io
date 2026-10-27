@@ -29,6 +29,7 @@
   function renderSlots(){slotsEl.innerHTML='';HOURS.forEach(function(h){var b=document.createElement('button');b.type='button';b.className='slot';b.textContent=h;b.setAttribute('aria-pressed',selHour===h);b.onclick=function(){selHour=h;renderSlots()};slotsEl.appendChild(b)});
     btn.disabled=!selHour;msg.className='msg';msg.textContent=selHour?fmt(selDay)+' às '+selHour:'Escolha um dia e um horário.'}
   if(daysEl){renderDays();renderSlots();}
+  document.querySelectorAll('#bookForm input,#bookForm select').forEach(function(el){el.addEventListener('input',function(){el.classList.remove('invalid');el.removeAttribute('aria-invalid')});el.addEventListener('change',function(){el.classList.remove('invalid')})});
   (function(){var nv=document.getElementById('nextVisit');if(!nv)return;var d=days[0],t=new Date();t.setHours(0,0,0,0);t.setDate(t.getDate()+1);
     nv.textContent=(d.getTime()===t.getTime()?'Amanhã, ':'')+WD[d.getDay()]+' '+d.getDate()+' de '+MES[d.getMonth()]+' · '+HOURS[0]})();
 
@@ -37,7 +38,9 @@
     e.preventDefault();if(!selHour)return;
     function v(id){return document.getElementById(id).value.trim()}
     var nome=v('bNome'),fone=v('bFone');
-    if(!nome||!fone){msg.className='msg err';msg.textContent='Preencha seu nome e WhatsApp.';return}
+    var checks=[['bNome',nome.length>=2,'seu nome'],['bFone',fone.replace(/\D/g,'').length>=10,'um WhatsApp com DDD'],['bCrianca',v('bCrianca').length>=2,'o nome da criança'],['bIdade',!!v('bIdade'),'a idade da criança'],['bOrigem',!!v('bOrigem'),'como conheceu a escola']];
+    var faltam=[];checks.forEach(function(c){var el=document.getElementById(c[0]);el.classList.toggle('invalid',!c[1]);el.setAttribute('aria-invalid',!c[1]);if(!c[1])faltam.push(c[2])});
+    if(faltam.length){msg.className='msg err';msg.textContent='Falta preencher: '+faltam.join(', ')+'.';var first=document.querySelector('#bookForm .invalid');if(first)first.focus();return}
     var resumo='Olá, equipe Girafinhas! 🦒\n'+
       'Gostaria de *agendar uma visita* para conhecer a escola e conversar sobre a matrícula do meu filho(a).\n\n'+
       '📅 *Dia:* '+fmtLong(selDay)+'\n'+
