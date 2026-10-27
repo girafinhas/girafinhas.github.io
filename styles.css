@@ -1297,3 +1297,33 @@ html.snap{scroll-snap-type:none}
   textarea{min-height:96px}
   .slot,.day{min-height:48px}
 }
+
+/* ===== v21: prioridade de informações ===== */
+.foot-rotas{font-weight:700;color:var(--blue)!important;margin-left:8px}
+.fx-side{scroll-margin-top:140px}
+@media (max-width:980px){
+  .fx-body{display:flex;flex-direction:column}
+  .fx-main{display:contents}
+  #segmentos{order:1}
+  .fx-side{order:2;position:static}
+  #diferenciais{order:3}
+  #avaliacoes{order:4}
+  #sobre{order:5}
+}
+@media (max-width:600px){
+  .home-fx .fx-box{padding:24px 0;gap:12px}
+  .home-fx .fx-box p,.home-fx .fx-box .fx-btn{display:none}
+  .home-fx .fx-box h2{font-size:1.3rem}
+  .home-fx .fx-score-big{display:none}
+  .home-fx .fx-score{gap:0}
+  .home-fx .fx-quotes figure{border-top:0;padding-top:0}
+  /* rodapé vira a seção final de localização e contato */
+  footer{background:var(--bg-soft);border-top:0;padding-top:32px}
+  footer .foot2::before{content:"Localização e contato";display:block;font-family:var(--f-display);font-weight:700;font-size:1.3rem;letter-spacing:-.02em;color:var(--ink)}
+  .foot-logo{display:none}
+  .foot-info{font-size:.95rem;gap:12px}
+  .fi-k{width:84px;font-size:.66rem}
+  .foot-info li:first-child{flex-wrap:wrap}
+  .foot-rotas{margin-left:0}
+}
+@media (max-width:600px){#mail{font-size:.84rem;overflow-wrap:normal;white-space:nowrap}.foot-info li > :nth-child(2){min-width:0}}
