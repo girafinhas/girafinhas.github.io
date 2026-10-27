@@ -1342,3 +1342,49 @@ html.snap{scroll-snap-type:none}
   .path .btn svg{width:17px;height:17px}
 }
 @media (max-width:600px){.fx-bar .btn{white-space:nowrap;font-size:.92rem;padding:12px 8px;gap:6px}.fx-bar .btn svg{width:17px;height:17px}}
+
+/* ===== v23: app da família, ajuda e resumos ===== */
+.fam-link{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:var(--ink)!important;padding:8px 12px;border:1px solid var(--line);border-radius:999px}
+.fam-link svg{width:16px;height:16px}
+.fam-link:hover{border-color:var(--ink)}
+@media (max-width:960px){nav.links .fam-link{border:0;border-radius:0;padding:14px 0;border-bottom:1px solid var(--line)}}
+@media (max-width:600px){nav.links.open .fam-link{font-size:1.08rem;padding:15px 2px}}
+.app-strip-wrap{padding-block:0 18px}
+.app-strip{display:flex;align-items:center;gap:14px;padding:12px 16px;border-radius:16px;background:var(--blue-soft);text-decoration:none;color:var(--ink)}
+.aps-ico{flex:none;width:38px;height:38px;border-radius:12px;background:var(--bg);color:var(--blue);display:grid;place-items:center}
+.aps-ico svg{width:20px;height:20px}
+.aps-txt{flex:1;min-width:0;display:grid;gap:1px}
+.aps-txt b{font-size:.95rem}
+.aps-txt span{font-size:.84rem;color:var(--ink-2)}
+.aps-go{font-weight:700;color:var(--blue);font-size:1.2rem}
+.home-fx .fx-head{border-bottom:0}
+.app-steps{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.app-steps li{display:flex;gap:14px;align-items:flex-start;padding:16px;border-radius:16px;background:var(--bg-soft)}
+.as-n{flex:none;width:32px;height:32px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-weight:800;display:grid;place-items:center}
+.app-steps b{display:block;font-size:1.02rem}
+.app-steps li div > span{display:block;color:var(--ink-2);font-size:.94rem;margin-top:2px}
+.store-btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.store{display:inline-flex;align-items:center;gap:10px;padding:9px 16px;border-radius:12px;background:#111;color:#fff;text-decoration:none;min-height:48px}
+.store svg{width:22px;height:22px}
+.store span{display:grid;line-height:1.1;font-weight:700;font-size:1rem}
+.store small{font-weight:500;font-size:.66rem;opacity:.8}
+.app-code{margin-top:16px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;font-size:.94rem;color:var(--ink-2)}
+.help{padding-block:12px}
+.help-box{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:20px 22px;border-radius:20px;background:var(--navy);color:var(--navy-fg)}
+.help-box b{display:block;font-family:var(--f-display);font-size:1.2rem;letter-spacing:-.01em}
+.help-box span{display:block;font-size:.92rem;opacity:.8;margin-top:2px}
+.help-actions{display:flex;gap:8px;flex-wrap:wrap}
+.inner .help .wrap{max-width:calc(var(--max) - 40px)}
+.day-steps li{gap:6px}
+.tile{align-items:center}
+@media (max-width:600px){
+  .app-strip-wrap{padding:0 max(20px,env(safe-area-inset-right,0px)) 16px max(20px,env(safe-area-inset-left,0px))}
+  .help .wrap{padding-inline:max(16px,env(safe-area-inset-left,0px))}
+  .help-box{padding:18px;border-radius:18px}
+  .help-actions{width:100%;display:grid;grid-template-columns:1fr 1fr}
+  .help-actions .btn{padding:12px 8px;font-size:.9rem;white-space:nowrap}
+  .help-actions .btn svg{width:17px;height:17px}
+  .inner .class{padding:10px 12px}
+  .tile{flex-direction:row;padding:12px}
+}
+@media (max-width:600px){.tile b{font-size:.84rem;overflow-wrap:anywhere}.tile{gap:8px}}
