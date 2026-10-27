@@ -1416,3 +1416,7 @@ footer#contato{scroll-margin-top:140px}
 .credit b{font-weight:700}
 .credit:hover{opacity:1;text-decoration:underline}
 @media (max-width:600px){.credit{font-size:.66rem}}
+
+.legal{display:grid;grid-template-columns:1fr auto 1fr;align-items:center}
+.legal .credit{grid-column:2;justify-self:center}
+@media (max-width:600px){.legal{grid-template-columns:1fr;justify-items:center;text-align:center;gap:8px}.legal .credit{grid-column:1}}
