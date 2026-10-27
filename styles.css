@@ -1403,3 +1403,10 @@ footer#contato{scroll-margin-top:140px}
   nav.links{top:calc(68px + env(safe-area-inset-top,0px))}
   nav.links.open{position:fixed;z-index:61;max-height:calc(100svh - 68px);overflow-y:auto}
 }
+
+/* atalhos logo abaixo do menu também no computador */
+.has-sub .subnav{position:sticky;top:calc(env(safe-area-inset-top,0px) + 68px);z-index:45}
+@media (max-width:600px){
+  .has-sub{padding-top:calc(68px + env(safe-area-inset-top,0px))}
+  .has-sub .subnav,.home-fx .fx-nav{position:sticky;top:calc(68px + env(safe-area-inset-top,0px))}
+}
