@@ -984,3 +984,38 @@ h3{font-size:1.08rem}
 }
 .fx-slogan em{font-style:normal;color:var(--ink);background:linear-gradient(transparent 66%,var(--accent) 66%,var(--accent) 90%,transparent 90%);padding:0 .04em}
 @media (max-width:600px){.home-fx .fx-head .hero-peek{display:none}}
+
+/* ===== girafa da rolagem ===== */
+.totop{display:none}
+.neckup{position:fixed;left:calc(10px + env(safe-area-inset-left,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:44;width:40px;height:40px;padding:0;border:0;background:none;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s}
+.neckup.show{opacity:1;pointer-events:auto}
+.nu-stem{position:absolute;left:13px;bottom:0;width:14px;border-radius:7px 7px 4px 4px;transform-origin:50% 100%;transform:scaleY(.04);will-change:transform;
+  background:radial-gradient(ellipse 4px 5px at 30% 15%,#8b5a2b 90%,transparent 100%) 0 0/14px 34px,radial-gradient(ellipse 4px 4px at 70% 62%,#8b5a2b 90%,transparent 100%) 0 0/14px 34px,#edb65e;box-shadow:0 0 0 2px var(--bg)}
+.nu-head{position:absolute;left:0;bottom:0;width:40px;height:32px;will-change:transform;filter:drop-shadow(0 4px 6px rgba(0,0,0,.2))}
+.nu-head svg{width:40px;height:32px;display:block;transform-origin:50% 100%;transition:transform .3s}
+.neckup:hover .nu-head svg,.neckup.go .nu-head svg{transform:rotate(-8deg) scale(1.08)}
+.nu-tip{position:absolute;left:44px;bottom:6px;font-size:.7rem;font-weight:700;background:var(--navy);color:var(--navy-fg);padding:3px 8px;border-radius:8px;white-space:nowrap;opacity:0;transform:translateX(-4px);transition:.25s}
+.neckup:hover .nu-tip,.neckup.full .nu-tip{opacity:1;transform:none}
+.home-fx .neckup{bottom:calc(16px + env(safe-area-inset-bottom,0px))}
+@media (max-width:600px){
+  .home-fx .neckup{bottom:calc(74px + env(safe-area-inset-bottom,0px))}
+  .neckup{left:calc(6px + env(safe-area-inset-left,0px))}
+}
+@media (prefers-reduced-motion:reduce){.nu-head svg{transition:none}}
+
+/* ===== atalhos sempre visíveis ===== */
+@media (max-width:600px){
+  .subnav .wrap{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:5px;overflow:visible;padding-block:8px}
+  .subnav a{justify-content:center;padding:7px 4px;font-size:.72rem;gap:0;min-width:0}
+  .subnav a::before{display:none}
+}
+
+/* ===== ficha sem logo repetida ===== */
+.fx-id{display:block}
+@media (max-width:600px){
+  .neckup{left:calc(-6px + env(safe-area-inset-left,0px));width:32px}
+  .nu-stem{left:9px;width:11px}
+  .nu-head,.nu-head svg{width:32px;height:26px}
+  .nu-tip{left:34px}
+  .subnav a{font-size:.68rem;padding:7px 2px;letter-spacing:-.01em}
+}
