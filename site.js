@@ -41,8 +41,12 @@
     var checks=[['bNome',nome.length>=2,'seu nome'],['bFone',fone.replace(/\D/g,'').length>=10,'um WhatsApp com DDD'],['bCrianca',v('bCrianca').length>=2,'o nome da criança'],['bIdade',!!v('bIdade'),'a idade da criança'],['bOrigem',!!v('bOrigem'),'como conheceu a escola']];
     var faltam=[];checks.forEach(function(c){var el=document.getElementById(c[0]);el.classList.toggle('invalid',!c[1]);el.setAttribute('aria-invalid',!c[1]);if(!c[1])faltam.push(c[2])});
     if(faltam.length){msg.className='msg err';msg.textContent='Falta preencher: '+faltam.join(', ')+'.';var first=document.querySelector('#bookForm .invalid');if(first)first.focus();return}
+    var modoEl=document.querySelector('input[name="bModo"]:checked'),online=modoEl&&modoEl.value==='online';
+    var sala='https://meet.jit.si/Girafinhas-'+selDay.replace(/-/g,'')+'-'+selHour.replace(':','')+'-'+Math.random().toString(36).slice(2,7);
     var resumo='Olá, equipe Girafinhas! 🦒\n'+
-      'Gostaria de *agendar uma visita* para conhecer a escola e conversar sobre a matrícula do meu filho(a).\n\n'+
+      (online?'Gostaria de agendar uma *reunião on-line com a direção* para conhecer a escola e conversar sobre a matrícula do meu filho(a).\n\n'
+             :'Gostaria de *agendar uma visita* para conhecer a escola e conversar sobre a matrícula do meu filho(a).\n\n')+
+      (online?'💻 *Formato:* reunião on-line por vídeo\n🔗 *Link da reunião:* '+sala+'\n':'🏫 *Formato:* visita presencial na escola\n')+
       '📅 *Dia:* '+fmtLong(selDay)+'\n'+
       '🕐 *Horário:* '+selHour+'\n\n'+
       '👤 *Responsável:* '+nome+'\n'+
@@ -50,10 +54,11 @@
       '🧒 *Criança:* '+(v('bCrianca')?v('bCrianca')+' · ':'')+v('bIdade')+'\n'+
       '💬 *Conheci a escola por:* '+v('bOrigem')+
       (v('bObs')?'\n📝 *Observações:* '+v('bObs'):'')+
+      (online?'\n\nNo horário, é só abrir o link: funciona no celular ou no computador, sem cadastro.':'')+
       '\n\nFico no aguardo da confirmação. Obrigado(a)!';
     var link=wa(resumo);
     var done=document.getElementById('bookDone');done.innerHTML='';
-    var big=document.createElement('div');big.className='big';big.textContent='Agendamento pronto!';
+    var big=document.createElement('div');big.className='big';big.textContent=online?'Reunião on-line pronta!':'Agendamento pronto!';
     var p=document.createElement('p');p.style.color='var(--ink-2)';p.textContent='Abrimos o WhatsApp da escola com o seu agendamento. Toque em enviar por lá, e a coordenação confirma o horário com você.';
     var sm=document.createElement('div');sm.className='summary';sm.textContent=resumo;
     var acts=document.createElement('div');acts.style.cssText='display:flex;gap:10px;flex-wrap:wrap';

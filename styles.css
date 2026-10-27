@@ -1459,3 +1459,13 @@ input.invalid,select.invalid{border-color:var(--err);background:color-mix(in srg
   .band{padding-block:28px}
 }
 @media (max-width:600px){.pg-visita .fx-bar{display:none}.pg-visita footer{padding-bottom:32px}}
+
+/* tipo de agendamento */
+.modes{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.mode{position:relative;cursor:pointer}
+.mode input{position:absolute;opacity:0;pointer-events:none}
+.mode span{display:grid;gap:2px;padding:12px 14px;border-radius:14px;background:var(--bg-soft);border:1.5px solid transparent;transition:border-color .2s,background-color .2s;min-height:48px}
+.mode b{font-size:.94rem}
+.mode small{font-size:.78rem;color:var(--ink-2)}
+.mode input:checked + span{border-color:var(--blue);background:var(--blue-soft)}
+.mode input:focus-visible + span{outline:2px solid var(--blue);outline-offset:2px}
