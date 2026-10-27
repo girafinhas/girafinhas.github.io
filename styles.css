@@ -1410,3 +1410,9 @@ footer#contato{scroll-margin-top:140px}
   .has-sub{padding-top:calc(68px + env(safe-area-inset-top,0px))}
   .has-sub .subnav,.home-fx .fx-nav{position:sticky;top:calc(68px + env(safe-area-inset-top,0px))}
 }
+
+/* crédito discreto */
+.credit{font-size:.68rem;color:var(--ink-2);text-decoration:none;opacity:.7}
+.credit b{font-weight:700}
+.credit:hover{opacity:1;text-decoration:underline}
+@media (max-width:600px){.credit{font-size:.66rem}}
