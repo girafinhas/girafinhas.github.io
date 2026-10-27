@@ -39,7 +39,7 @@
     var nome=v('bNome'),fone=v('bFone');
     if(!nome||!fone){msg.className='msg err';msg.textContent='Preencha seu nome e WhatsApp.';return}
     var resumo='Olá, equipe Girafinhas! 🦒\n'+
-      'Gostaria de *agendar uma visita* ao novo espaço.\n\n'+
+      'Gostaria de *agendar uma visita* para conhecer a escola e conversar sobre a matrícula do meu filho(a).\n\n'+
       '📅 *Dia:* '+fmtLong(selDay)+'\n'+
       '🕐 *Horário:* '+selHour+'\n\n'+
       '👤 *Responsável:* '+nome+'\n'+

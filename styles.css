@@ -1129,3 +1129,20 @@ h1,.fx-slogan{line-height:1.08}
   .nu-stem,.neckup .nu-stem{left:0;width:100%;height:7px;top:11px}
   .nu-head,.nu-head svg,.neckup .nu-head{width:30px;height:26px}
 }
+
+/* ===== girafa esticada na régua ===== */
+.fx-ruler{grid-template-columns:70px 1fr;align-items:stretch}
+.tallg{display:flex;flex-direction:column;align-items:center;height:100%;transform-origin:50% 100%;animation:sway 5s ease-in-out infinite}
+.tg-head{width:58px;height:auto;flex:none;position:relative;z-index:1;margin-bottom:-3px;transform-origin:50% 100%;animation:nod 5s ease-in-out infinite}
+@keyframes nod{0%,100%{transform:rotate(0)}40%{transform:rotate(6deg)}75%{transform:rotate(-4deg)}}
+.tg-neck{flex:1;width:17px;min-height:60px;border-radius:2px;
+  background:radial-gradient(ellipse 5px 6px at 30% 20%,#8b5a2b 90%,transparent 100%) 0 0/17px 46px,radial-gradient(ellipse 5px 5px at 72% 70%,#8b5a2b 90%,transparent 100%) 0 0/17px 46px,#edb65e}
+.tg-body{width:70px;height:auto;flex:none;margin-top:-6px;margin-left:16px}
+@media (max-width:600px){.fx-ruler{grid-template-columns:58px 1fr}.tg-head{width:48px}.tg-neck{width:14px;background-size:14px 40px,14px 40px,auto}.tg-body{width:58px;margin-left:14px}}
+@media (prefers-reduced-motion:reduce){.tallg,.tg-head{animation:none}}
+
+/* ===== etiqueta "imagem ilustrativa" bem menor ===== */
+.fx-photo figcaption,.fx-banner figcaption{font-size:.5rem;font-weight:500;letter-spacing:.02em;padding:1px 5px;border-radius:4px;right:7px;bottom:6px;background:rgba(22,33,58,.35);opacity:.8}
+.tallg{animation-name:swaytall}
+@keyframes swaytall{0%,100%{transform:rotate(0)}30%{transform:rotate(-1.4deg)}65%{transform:rotate(1.2deg)}}
+@media (max-width:600px){.tg-head{width:56px}.fx-ruler{grid-template-columns:64px 1fr}.tallg{padding-left:4px}}
