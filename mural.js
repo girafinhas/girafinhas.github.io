@@ -7,6 +7,12 @@
     data:    data do evento no formato "AAAA-MM-DD" (ou deixe "" se não tiver)
   Os avisos aparecem no site na ordem em que estão aqui (o primeiro aparece primeiro).
 */
+/*
+  CANAL DO WHATSAPP (opcional): cole aqui o link do canal da escola no WhatsApp,
+  por exemplo "https://whatsapp.com/channel/XXXXXXXX". Deixe "" se ainda não tiver.
+*/
+window.MURAL_CANAL = "";
+
 window.MURAL = [
   {
     tipo: "evento",

@@ -1223,3 +1223,77 @@ h1,.fx-slogan{line-height:1.08}
   .tg-neck{width:16px;background-size:16px 42px,16px 42px,auto}
   .tg-body{width:66px}
 }
+
+/* =====================================================================
+   v20 — refinamento minimalista, celular em primeiro lugar
+   ===================================================================== */
+:root{--ink-2:#4b5569}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink-2:#b9c0cf}}
+:root[data-theme="dark"]{--ink-2:#b9c0cf}
+
+/* sem encaixe de tela e sem efeitos de entrada */
+html.snap{scroll-snap-type:none}
+.reveal .rv{opacity:1!important;transform:none!important}
+
+/* inscrição nos avisos do mural */
+.sub-box{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,48px);align-items:start}
+.sub-copy{display:grid;gap:12px;align-content:start}
+.sub-copy h2{font-size:clamp(1.35rem,2.4vw,1.8rem)}
+.sub-copy p{color:var(--ink-2);font-size:.95rem;max-width:46ch}
+.sub-canal{justify-self:start;margin-top:4px}
+.sub-form{display:grid;gap:12px}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:.84rem;color:var(--ink-2);line-height:1.45;cursor:pointer}
+.check input{width:20px;height:20px;flex:none;margin:1px 0 0;accent-color:var(--blue)}
+.sub-form .btn{justify-self:start}
+@media (max-width:760px){.sub-box{grid-template-columns:1fr}}
+
+@media (max-width:600px){
+  /* tipografia confortável */
+  body{font-size:16px;line-height:1.6}
+  h1,.hero h1,.home-fx .fx-title h1{font-size:1.75rem;line-height:1.15;letter-spacing:-.025em}
+  .inner .page-hero h1{font-size:1.65rem;line-height:1.15}
+  h2,.inner h2,.home-fx .fx-card h2{font-size:1.3rem;line-height:1.2}
+  h3{font-size:1.05rem}
+  .lead,.hero .lead,.inner .page-hero .lead{font-size:1rem;line-height:1.55}
+  .home-fx .fx-card p,.fx-card p{font-size:1rem}
+  .eyebrow{font-size:.72rem;letter-spacing:.12em}
+  .home-fx .fx-slogan{font-size:1.15rem}
+  .fx-classes span,.fx-periods span,.tile div span,.act span,.pillar p,.timeline p,.day-steps p,.inner .class p{font-size:.88rem}
+  .fx-icons li,.home-fx .fx-icons li{font-size:.95rem}
+  .faq summary,.inner .faq summary{font-size:1.02rem;padding:16px 36px 16px 0;min-height:52px}
+  .faq details p{font-size:.95rem}
+
+  /* sem as seções de tela inteira */
+  .home-fx .fx-head,.home-fx .fx-card,.home-fx .fx-side{min-height:0;display:grid;scroll-snap-align:none}
+  .home-fx .fx-head .wrap{padding-block:24px 28px}
+  .home-fx .fx-card{padding:28px 0}
+
+  /* atalhos do início: chips que cabem na tela */
+  .home-fx .fx-nav{position:sticky;top:calc(env(safe-area-inset-top,0px) + 68px);right:auto;transform:none;background:var(--header-bg);border-bottom:1px solid var(--line);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+  .home-fx .fx-nav .wrap{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:6px;padding:8px max(16px,env(safe-area-inset-right,0px)) 8px max(16px,env(safe-area-inset-left,0px));flex-direction:row}
+  .home-fx .fx-nav a,.home-fx .fx-nav a.on{width:auto;height:auto;font-size:.74rem;padding:8px 2px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--ink);justify-content:center}
+  .home-fx .fx-nav a.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+  .home-fx .fx-nav a.on::after{display:none}
+
+  /* menos enfeite no celular */
+  .hero-accent,.page-hero .hero-peek,.home-fx .fx-head .hero-peek,.fx-photo .perch{display:none}
+  .page-hero .lead{max-width:none}
+  .fx-photo > img:not(.perch){max-height:none}
+
+  /* barra fixa em todas as páginas, sem botão flutuante */
+  .wa,.home-fx .wa{display:none}
+  footer{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
+  .fx-bar .btn{min-height:48px;font-size:.98rem}
+
+  /* menu do celular em lista grande */
+  nav.links.open{padding-block:8px 20px;gap:0;box-shadow:0 24px 40px -24px rgba(22,33,58,.35)}
+  nav.links.open a:not(.btn){font-size:1.08rem;padding:15px 2px;border-bottom:1px solid var(--line)}
+  nav.links.open a[aria-current="page"]:not(.btn)::after{display:none}
+  nav.links.open a[aria-current="page"]:not(.btn){color:var(--blue)}
+  nav.links.open .btn{margin-top:16px;min-height:48px;font-size:1rem}
+
+  /* formulários com toque confortável */
+  input,select,textarea{font-size:16px;min-height:48px}
+  textarea{min-height:96px}
+  .slot,.day{min-height:48px}
+}

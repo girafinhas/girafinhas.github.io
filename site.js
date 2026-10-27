@@ -93,36 +93,26 @@
     a.append(meta,h,p);posts.appendChild(a)})}
 
   /* voltar ao topo + atalho ativo */
-  /* girafa que estica o pescoço (vertical) com a rolagem: até ~75% da tela */
-  var nu=document.querySelector('.neckup');
-  if(nu){
-    var stem=nu.querySelector('.nu-stem'),head=nu.querySelector('.nu-head'),ticking=false;
-    var upd=function(){ticking=false;
-      var max=document.documentElement.scrollHeight-innerHeight,pr=max>0?Math.min(1,Math.max(0,scrollY/max)):0;
-      var bottom=parseFloat(getComputedStyle(nu).bottom)||16;
-      var len=Math.max(120,(innerHeight-68-bottom-40)*0.75);
-      var k=0.06+pr*0.94;
-      stem.style.height=len+'px';stem.style.transform='scaleY('+k+')';
-      head.style.transform='translateY('+(-k*len)+'px)';
-      nu.classList.toggle('show',scrollY>160);nu.classList.toggle('full',pr>0.97)};
-    addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(upd)}},{passive:true});
-    addEventListener('resize',upd);upd();
-    head.addEventListener('click',function(){nu.classList.add('go');window.scrollTo({top:0,behavior:'smooth'});setTimeout(function(){nu.classList.remove('go')},900)});
-  }
   var sn=document.querySelectorAll('.subnav a');
   if(sn.length&&'IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){sn.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-40% 0px -55% 0px'});
     sn.forEach(function(a){var t=document.querySelector(a.getAttribute('href'));if(t)io.observe(t)})}
 
-  /* celular: encaixe por tela e aparecer suave */
-  if(window.matchMedia&&matchMedia('(max-width:600px)').matches&&document.body.classList.contains('home-fx')){
-    document.documentElement.classList.add('snap');
-    var items=document.querySelectorAll('.fx-head .fx-title,.fx-card,.fx-box');
-    if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
-      document.body.classList.add('reveal');
-      items.forEach(function(el){el.classList.add('rv')});
-      var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target)}})},{threshold:.15});
-      items.forEach(function(el){ro.observe(el)});
-      setTimeout(function(){items.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<innerHeight&&r.bottom>0)el.classList.add('in')})},50);
-    }
-  }
+
+  /* avisos do mural: inscrição */
+  var canal=document.getElementById('subCanal');
+  if(canal&&window.MURAL_CANAL){canal.href=window.MURAL_CANAL;canal.hidden=false}
+  var sf=document.getElementById('subForm');
+  if(sf)sf.addEventListener('submit',function(e){
+    e.preventDefault();var m=document.getElementById('sMsg');function v(id){return document.getElementById(id).value.trim()}
+    if(!v('sNome')||v('sFone').replace(/\D/g,'').length<10){m.className='msg err';m.textContent='Preencha seu nome e um WhatsApp com DDD.';return}
+    if(!document.getElementById('sOk').checked){m.className='msg err';m.textContent='Marque a autorização para receber os avisos.';return}
+    var txt='Olá, equipe Girafinhas! 🦒\n'+
+      'Quero *receber os avisos do mural* da escola.\n\n'+
+      '👤 *Nome:* '+v('sNome')+'\n'+
+      '📱 *WhatsApp:* '+v('sFone')+'\n'+
+      (v('sMail')?'✉️ *E-mail:* '+v('sMail')+'\n':'')+
+      '\nAutorizo o envio de avisos por WhatsApp'+(v('sMail')?' e e-mail':'')+'.';
+    m.className='msg ok';m.textContent='Pronto! Abrimos o WhatsApp da escola com o seu cadastro. É só tocar em enviar.';
+    window.location.href=wa(txt);
+  });
 })();
