@@ -110,4 +110,17 @@
   var sn=document.querySelectorAll('.subnav a');
   if(sn.length&&'IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){sn.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id)})}})},{rootMargin:'-40% 0px -55% 0px'});
     sn.forEach(function(a){var t=document.querySelector(a.getAttribute('href'));if(t)io.observe(t)})}
+
+  /* celular: encaixe por tela e aparecer suave */
+  if(window.matchMedia&&matchMedia('(max-width:600px)').matches&&document.body.classList.contains('home-fx')){
+    document.documentElement.classList.add('snap');
+    var items=document.querySelectorAll('.fx-head .fx-title,.fx-card,.fx-box');
+    if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+      document.body.classList.add('reveal');
+      items.forEach(function(el){el.classList.add('rv')});
+      var ro=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target)}})},{threshold:.15});
+      items.forEach(function(el){ro.observe(el)});
+      setTimeout(function(){items.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<innerHeight&&r.bottom>0)el.classList.add('in')})},50);
+    }
+  }
 })();

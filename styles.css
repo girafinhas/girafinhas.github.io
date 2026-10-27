@@ -1019,3 +1019,75 @@ h3{font-size:1.08rem}
   .nu-tip{left:34px}
   .subnav a{font-size:.68rem;padding:7px 2px;letter-spacing:-.01em}
 }
+
+/* ===== alinhamento da palavra que troca ===== */
+h1,.fx-slogan{line-height:1.08}
+.rot{vertical-align:bottom}
+#local .btn{align-items:center;line-height:1}
+#local .btn svg,.btn svg{display:block;flex:none}
+
+/* ===== celular: minimalista, uma informação por tela ===== */
+@media (max-width:600px){
+  html.snap{scroll-snap-type:y proximity;scroll-padding-top:68px}
+  .home-fx{background:var(--bg)}
+  .home-fx .fx-head{border-bottom:0}
+  .home-fx .fx-head,.home-fx .fx-card,.home-fx .fx-side{scroll-snap-align:start;min-height:calc(100svh - 68px - 70px);display:flex;flex-direction:column;justify-content:center}
+  .home-fx .fx-head .wrap{width:100%}
+  .home-fx .fx-tags .tag:not(.tag-live){display:none}
+  .home-fx .fx-title{gap:16px}
+  .home-fx .fx-title h1{font-size:2rem}
+  .home-fx .fx-slogan{font-size:1.2rem}
+  .home-fx .fx-addr{display:none}
+  .home-fx .fx-body{padding:0 max(20px,env(safe-area-inset-right,0px)) 80px max(20px,env(safe-area-inset-left,0px));gap:0}
+  .home-fx .fx-main{gap:0}
+  .home-fx .fx-card{background:none;border:0;border-radius:0;padding:24px 0;gap:16px;border-top:1px solid var(--line)}
+  .home-fx .fx-card h2{font-size:1.35rem}
+  .home-fx .fx-more{font-size:.8rem}
+  .home-fx .fx-card p{font-size:.92rem}
+  .home-fx .fx-card p + p{display:none}
+  .home-fx .fx-facts{gap:0;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
+  .home-fx .fx-facts div{background:none;border-radius:0;padding:12px 0;border-bottom:1px solid var(--line)}
+  .home-fx .fx-classes li{border:0;border-bottom:1px solid var(--line);border-radius:0;padding:10px 2px;background:none}
+  .home-fx .fx-periods div{border-radius:10px}
+  .home-fx .fx-icons{grid-template-columns:1fr;gap:0}
+  .home-fx .fx-icons li{border:0;border-bottom:1px solid var(--line);border-radius:0;padding:10px 0;font-size:.9rem}
+  .home-fx .fx-icons li:nth-child(n+7){display:none}
+  .home-fx .fx-icons .tile-ico{background:none;width:26px;height:26px}
+  .home-fx .fx-icons .tile-ico::after{display:none}
+  .home-fx .fx-score-big{background:none;color:var(--ink);padding:0;border-radius:0}
+  .home-fx .fx-score-big small{opacity:1;color:var(--ink-2)}
+  .home-fx .fx-quotes figure{background:none;padding:14px 0 0;border-top:1px solid var(--line);border-radius:0}
+  .home-fx .fx-quotes figure:nth-child(n+2){display:none}
+  .home-fx .fx-quotes blockquote{font-family:var(--f-display);font-weight:600;font-size:1.15rem;line-height:1.35}
+  .home-fx .fx-contact div{background:none;border-radius:0;padding:10px 0;border-bottom:1px solid var(--line)}
+  .home-fx .fx-contact{gap:0}
+  .home-fx .fx-side{border-top:1px solid var(--line)}
+  .home-fx .fx-box{border:0;box-shadow:none;padding:24px 0;background:none}
+  .home-fx .fx-box-list{display:none}
+
+  /* abas como pontinhos na lateral */
+  .home-fx .fx-nav{position:fixed;top:50%;right:calc(6px + env(safe-area-inset-right,0px));left:auto;transform:translateY(-50%);background:none;border:0;-webkit-backdrop-filter:none;backdrop-filter:none;z-index:46}
+  .home-fx .fx-nav .wrap{display:flex;flex-direction:column;align-items:flex-end;gap:10px;padding:0;overflow:visible;max-width:none}
+  .home-fx .fx-nav a{position:relative;font-size:0;padding:0;width:7px;height:7px;border-radius:4px;border:0;background:var(--line);transition:height .25s,background .25s}
+  .home-fx .fx-nav a::before{display:none}
+  .home-fx .fx-nav a.on{height:22px;background:var(--accent)}
+  .home-fx .fx-nav a.on::after{content:attr(data-l);position:absolute;right:13px;top:50%;transform:translateY(-50%);font-size:.66rem;font-weight:700;letter-spacing:.04em;white-space:nowrap;color:var(--ink);background:var(--bg);padding:2px 7px;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+
+  /* aparecer suave */
+  .reveal .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.8,.2,1)}
+  .reveal .rv.in{opacity:1;transform:none}
+
+  /* páginas internas mais limpas */
+  .inner:not(.home-fx){background:var(--bg)}
+  .inner:not(.home-fx) .band > .wrap{border:0;border-radius:0;background:none;padding:24px 0;margin-inline:20px;border-top:1px solid var(--line)}
+  .inner:not(.home-fx) .band.navy > .wrap{background:var(--navy);border-radius:18px;padding:20px 16px;margin-inline:12px;border:0}
+  .inner:not(.home-fx) .page-hero{border-bottom:0}
+  .inner .class,.inner .pillar,.inner .timeline li,.inner .post,.inner .tile,.inner .party-list li{border-color:transparent;background:var(--bg-soft)}
+}
+@media (max-width:600px) and (prefers-reduced-motion:reduce){.reveal .rv{opacity:1;transform:none;transition:none}}
+@media (max-width:600px){
+  .home-fx .fx-body{padding-right:max(30px,env(safe-area-inset-right,0px))}
+  .home-fx .fx-head .wrap{padding-right:max(30px,env(safe-area-inset-right,0px))}
+  .home-fx .fx-nav a.on::after{animation:dotlabel 1.6s ease forwards}
+}
+@keyframes dotlabel{0%{opacity:0}12%,70%{opacity:1}100%{opacity:0;visibility:hidden}}
