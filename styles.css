@@ -1327,3 +1327,18 @@ html.snap{scroll-snap-type:none}
   .foot-rotas{margin-left:0}
 }
 @media (max-width:600px){#mail{font-size:.84rem;overflow-wrap:normal;white-space:nowrap}.foot-info li > :nth-child(2){min-width:0}}
+
+/* ===== dois caminhos: saber mais / agendar ===== */
+.paths{display:grid;gap:10px}
+.path{display:grid;gap:6px}
+.path small{font-size:.76rem;font-weight:700;color:var(--ink-2)}
+.fx-bar{grid-template-columns:1fr 1fr}
+@media (max-width:600px){
+  .home-fx .fx-box .fx-btn{display:flex}
+  .home-fx .fx-box p{display:block;font-size:.95rem}
+  .paths{grid-template-columns:1fr 1fr;gap:10px}
+  .path small{font-size:.72rem}
+  .path .btn{padding:12px 8px;font-size:.9rem;min-height:48px}
+  .path .btn svg{width:17px;height:17px}
+}
+@media (max-width:600px){.fx-bar .btn{white-space:nowrap;font-size:.92rem;padding:12px 8px;gap:6px}.fx-bar .btn svg{width:17px;height:17px}}

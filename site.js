@@ -98,21 +98,4 @@
     sn.forEach(function(a){var t=document.querySelector(a.getAttribute('href'));if(t)io.observe(t)})}
 
 
-  /* avisos do mural: inscrição */
-  var canal=document.getElementById('subCanal');
-  if(canal&&window.MURAL_CANAL){canal.href=window.MURAL_CANAL;canal.hidden=false}
-  var sf=document.getElementById('subForm');
-  if(sf)sf.addEventListener('submit',function(e){
-    e.preventDefault();var m=document.getElementById('sMsg');function v(id){return document.getElementById(id).value.trim()}
-    if(!v('sNome')||v('sFone').replace(/\D/g,'').length<10){m.className='msg err';m.textContent='Preencha seu nome e um WhatsApp com DDD.';return}
-    if(!document.getElementById('sOk').checked){m.className='msg err';m.textContent='Marque a autorização para receber os avisos.';return}
-    var txt='Olá, equipe Girafinhas! 🦒\n'+
-      'Quero *receber os avisos do mural* da escola.\n\n'+
-      '👤 *Nome:* '+v('sNome')+'\n'+
-      '📱 *WhatsApp:* '+v('sFone')+'\n'+
-      (v('sMail')?'✉️ *E-mail:* '+v('sMail')+'\n':'')+
-      '\nAutorizo o envio de avisos por WhatsApp'+(v('sMail')?' e e-mail':'')+'.';
-    m.className='msg ok';m.textContent='Pronto! Abrimos o WhatsApp da escola com o seu cadastro. É só tocar em enviar.';
-    window.location.href=wa(txt);
-  });
 })();
