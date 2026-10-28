@@ -1631,3 +1631,25 @@ a.bt:hover{transform:translateY(-2px)}
   .h2-vbar-btns .btn{padding:12px 6px;font-size:.88rem;gap:6px}
   .h2-vbar-btns .btn svg{width:16px;height:16px}
 }
+
+/* números organizados + destaque de festas */
+.h2-bento{display:none}
+.h2-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:12px}
+.st{display:grid;gap:6px;align-content:start;padding:20px;border-radius:18px;background:var(--bg-soft);text-decoration:none;color:var(--ink)}
+a.st:hover{background:var(--blue-soft)}
+.st b{font-family:var(--f-display);font-size:clamp(1.7rem,2.6vw,2.2rem);line-height:1;letter-spacing:-.03em}
+.st b i{font-style:normal;color:var(--accent);font-size:.55em;vertical-align:.6em;margin-left:2px}
+.st b small{font-size:.55em;letter-spacing:-.01em;color:var(--ink-2)}
+.st span{font-size:.86rem;color:var(--ink-2);line-height:1.4}
+.h2-party{display:flex;align-items:center;gap:16px;padding:18px 22px;border-radius:18px;background:var(--sun-soft);text-decoration:none;color:var(--ink);margin-bottom:16px}
+.hp-ico{flex:none;width:46px;height:46px;border-radius:14px;background:var(--bg);color:#a8691f;display:grid;place-items:center}
+.hp-ico svg{width:24px;height:24px}
+.hp-txt{flex:1;min-width:0;display:grid;gap:2px}
+.hp-txt b{font-family:var(--f-display);font-size:1.1rem;letter-spacing:-.01em}
+.hp-txt span{font-size:.88rem;color:var(--ink-2)}
+.hp-go{flex:none;font-weight:700;color:var(--blue);white-space:nowrap}
+@media (max-width:900px){.h2-stats{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){
+  .h2-stats{gap:8px}.st{padding:14px;border-radius:14px}.st b{font-size:1.6rem}.st span{font-size:.78rem}
+  .h2-party{align-items:flex-start;padding:14px;gap:12px}.hp-ico{width:38px;height:38px}.hp-txt b{font-size:1rem}.hp-txt span{font-size:.84rem}.hp-go{display:none}
+}
