@@ -1611,3 +1611,23 @@ a.bt:hover{transform:translateY(-2px)}
   .h2-visit-card .path .btn{white-space:nowrap;font-size:.86rem;padding:12px 6px;gap:6px}
   .h2-visit-card .path .btn svg{width:16px;height:16px}
 }
+
+/* faixa de visita compacta */
+.h2-visit{padding-block:clamp(22px,3vw,32px)}
+.h2-visit::after{width:180px;height:180px;right:-60px;top:-60px}
+.h2-vbar{position:relative;z-index:1;display:grid;grid-template-columns:1fr auto auto;gap:16px 24px;align-items:center;color:var(--navy-fg)}
+.h2-vbar h2{font-size:clamp(1.15rem,2vw,1.45rem);color:var(--navy-fg)}
+.h2-vbar p{font-size:.9rem;opacity:.75;margin-top:2px}
+.h2-vbar .fx-nv{background:rgba(255,255,255,.08);padding:8px 14px 8px 8px;width:auto}
+.h2-vbar .fx-nv .nv-ico{width:32px;height:32px;font-size:.95rem}
+.h2-vbar .fx-nv b{font-size:.92rem}
+.h2-vbar-btns{display:flex;gap:8px}
+.h2-vbar-btns .btn{white-space:nowrap}
+@media (max-width:980px){.h2-vbar{grid-template-columns:1fr}.h2-vbar .fx-nv{justify-self:start}}
+@media (max-width:600px){
+  .h2-vbar{gap:12px}
+  .h2-vbar .fx-nv{width:100%}
+  .h2-vbar-btns{display:grid;grid-template-columns:1fr 1fr}
+  .h2-vbar-btns .btn{padding:12px 6px;font-size:.88rem;gap:6px}
+  .h2-vbar-btns .btn svg{width:16px;height:16px}
+}
